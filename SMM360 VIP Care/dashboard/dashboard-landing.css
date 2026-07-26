@@ -1,0 +1,328 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : dashboard-landing.css
+   MODULE      : Dashboard Landing
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   استایل صفحه اصلی داشبورد
+
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-001            */
+/* ROOT                                              */
+/* ================================================= */
+
+:root{
+
+    --navy:#07192F;
+    --blue:#102846;
+    --gold:#D4AF37;
+    --white:#FFFFFF;
+    --gray:#D9D9D9;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-002            */
+/* RESET                                             */
+/* ================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    direction:rtl;
+
+    font-family:Tahoma,sans-serif;
+
+    background:radial-gradient(circle,#143A66 0%,#07192F 65%,#04111F 100%);
+
+    color:var(--white);
+
+    min-height:100vh;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-003            */
+/* MAIN CONTAINER                                    */
+/* ================================================= */
+
+.landing-container{
+
+    width:95%;
+
+    max-width:1500px;
+
+    margin:30px auto;
+
+    background:rgba(8,22,43,.88);
+
+    border:2px solid var(--gold);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 35px rgba(212,175,55,.20);
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-004            */
+/* HEADER                                            */
+/* ================================================= */
+
+.landing-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 35px;
+
+    background:#081B31;
+
+    border-bottom:2px solid rgba(212,175,55,.35);
+
+}
+
+.logo img{
+
+    width:80px;
+
+}
+
+.header-title{
+
+    text-align:center;
+
+}
+
+.header-title h1{
+
+    color:var(--gold);
+
+    font-size:34px;
+
+}
+
+.header-title p{
+
+    margin-top:8px;
+
+    color:var(--gray);
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile img{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    border:3px solid var(--gold);
+
+}
+
+.profile h3{
+
+    color:var(--gold);
+
+    margin-bottom:5px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-005            */
+/* MAIN                                              */
+/* ================================================= */
+
+.landing-main{
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.landing-main h2{
+
+    color:var(--gold);
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.landing-main p{
+
+    color:#E6E6E6;
+
+    font-size:19px;
+
+    line-height:38px;
+
+    margin-bottom:45px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-006            */
+/* GRID                                              */
+/* ================================================= */
+
+.landing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.landing-card{
+
+    background:var(--blue);
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.30s;
+
+    cursor:pointer;
+
+}
+
+.landing-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 25px rgba(212,175,55,.35);
+
+}
+
+.landing-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.landing-card p{
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:32px;
+
+    color:#DDDDDD;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-007            */
+/* FOOTER                                            */
+/* ================================================= */
+
+.landing-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 35px;
+
+    background:#081B31;
+
+    border-top:2px solid rgba(212,175,55,.35);
+
+    color:#CCCCCC;
+
+    font-size:14px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : DASHBOARD-LANDING-CSS-008            */
+/* RESPONSIVE                                        */
+/* ================================================= */
+
+@media(max-width:992px){
+
+    .landing-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .landing-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    .landing-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .landing-footer{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+}

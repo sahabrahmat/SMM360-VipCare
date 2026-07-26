@@ -1,0 +1,109 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "shared-theme.json",
+        "module": "Shared",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "تنظیمات قالب و ظاهر سراسری سیستم"
+    },
+
+    "defaultTheme": "default",
+
+    "activeTheme": "default",
+
+    "themes": {
+
+        "default": {
+
+            "name": "Default",
+
+            "displayName": "پیش‌فرض",
+
+            "enabled": true
+
+        },
+
+        "light": {
+
+            "name": "Light",
+
+            "displayName": "روشن",
+
+            "enabled": true
+
+        },
+
+        "dark": {
+
+            "name": "Dark",
+
+            "displayName": "تیره",
+
+            "enabled": true
+
+        }
+
+    },
+
+    "appearance": {
+
+        "direction": "rtl",
+
+        "language": "fa",
+
+        "font": "Vazirmatn",
+
+        "fontSize": "16px",
+
+        "borderRadius": "12px",
+
+        "animation": true,
+
+        "responsive": true
+
+    },
+
+    "colors": {
+
+        "primary": "#0B3A53",
+
+        "secondary": "#D4AF37",
+
+        "success": "#28A745",
+
+        "warning": "#FFC107",
+
+        "danger": "#DC3545",
+
+        "info": "#17A2B8",
+
+        "background": "#F5F7FA",
+
+        "surface": "#FFFFFF",
+
+        "text": "#1F2937"
+
+    },
+
+    "settings": {
+
+        "allowThemeChange": true,
+
+        "rememberSelectedTheme": true,
+
+        "autoLoadTheme": true
+
+    },
+
+    "endVersion": {
+
+        "version": "0.0.1",
+
+        "message": "پایان ماژول"
+
+    }
+}

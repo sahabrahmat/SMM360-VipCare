@@ -1,0 +1,691 @@
+/* ==========================================================
+   SMM360 VIP Care
+   FONT SYSTEM
+   Version : 1.0.0
+   Enterprise Edition
+========================================================== */
+
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ==========================================================
+   ROOT VARIABLES
+========================================================== */
+
+:root{
+
+    --font-family:"Vazirmatn",sans-serif;
+
+    /* Font Weight */
+
+    --font-thin:200;
+    --font-extra-light:250;
+    --font-light:300;
+    --font-normal:400;
+    --font-medium:500;
+    --font-semibold:600;
+    --font-bold:700;
+    --font-extra-bold:800;
+    --font-black:900;
+
+    /* Font Size */
+
+    --font-2xs:10px;
+    --font-xs:12px;
+    --font-sm:14px;
+    --font-md:16px;
+    --font-lg:18px;
+    --font-xl:20px;
+    --font-2xl:24px;
+    --font-3xl:30px;
+    --font-4xl:36px;
+    --font-5xl:42px;
+    --font-6xl:48px;
+    --font-7xl:56px;
+    --font-8xl:64px;
+    --font-9xl:72px;
+
+    /* Dashboard */
+
+    --dashboard-title:26px;
+    --dashboard-card:17px;
+    --dashboard-number:34px;
+
+    /* Sidebar */
+
+    --sidebar-title:17px;
+    --sidebar-item:15px;
+
+    /* Header */
+
+    --header-title:24px;
+    --header-subtitle:16px;
+
+    /* Footer */
+
+    --footer-size:13px;
+
+    /* Forms */
+
+    --label-size:15px;
+    --input-size:16px;
+    --placeholder-size:15px;
+
+    /* Table */
+
+    --table-header:15px;
+    --table-body:15px;
+
+    /* Button */
+
+    --button-size:16px;
+
+    /* Card */
+
+    --card-title:18px;
+    --card-body:15px;
+
+    /* Report */
+
+    --report-title:24px;
+    --report-subtitle:18px;
+    --report-text:15px;
+
+    /* PDF */
+
+    --pdf-title:22px;
+    --pdf-body:14px;
+
+    /* Roshanak Monitor */
+
+    --monitor-title:32px;
+    --monitor-value:42px;
+    --monitor-alert:54px;
+
+    /* Patient Card */
+
+    --patient-card-title:16px;
+    --patient-card-text:14px;
+
+    /* Prescription */
+
+    --prescription-title:22px;
+    --prescription-body:16px;
+
+    /* Letter */
+
+    --letter-title:24px;
+    --letter-body:16px;
+
+    /* Line Height */
+
+    --line-tight:1.3;
+    --line-normal:1.7;
+    --line-loose:2;
+    --line-extra:2.3;
+
+    /* Letter Space */
+
+    --letter-tight:-0.2px;
+    --letter-normal:0;
+    --letter-wide:0.5px;
+
+}
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:var(--font-family);
+
+    direction:rtl;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+html{
+
+    font-size:16px;
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-size:var(--font-md);
+
+    font-weight:var(--font-normal);
+
+    line-height:var(--line-normal);
+
+}
+
+/* ==========================================================
+   HEADINGS
+========================================================== */
+
+h1{
+
+    font-size:var(--font-5xl);
+
+    font-weight:var(--font-black);
+
+}
+
+h2{
+
+    font-size:var(--font-4xl);
+
+    font-weight:var(--font-extra-bold);
+
+}
+
+h3{
+
+    font-size:var(--font-3xl);
+
+    font-weight:var(--font-bold);
+
+}
+
+h4{
+
+    font-size:var(--font-2xl);
+
+    font-weight:var(--font-bold);
+
+}
+
+h5{
+
+    font-size:var(--font-xl);
+
+    font-weight:var(--font-semibold);
+
+}
+
+h6{
+
+    font-size:var(--font-lg);
+
+    font-weight:var(--font-semibold);
+
+}
+
+/* ==========================================================
+   PARAGRAPH
+========================================================== */
+
+p{
+
+    font-size:var(--font-md);
+
+    line-height:var(--line-loose);
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+label{
+
+    font-size:var(--label-size);
+
+    font-weight:var(--font-semibold);
+
+}
+
+input,
+textarea,
+select{
+
+    font-size:var(--input-size);
+
+    font-family:var(--font-family);
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    font-size:var(--placeholder-size);
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+button{
+
+    font-family:var(--font-family);
+
+    font-size:var(--button-size);
+
+    font-weight:var(--font-semibold);
+
+}
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+th{
+
+    font-size:var(--table-header);
+
+    font-weight:var(--font-bold);
+
+}
+
+td{
+
+    font-size:var(--table-body);
+
+}
+
+/* ==========================================================
+   SMALL
+========================================================== */
+
+small{
+
+    font-size:var(--font-sm);
+
+}
+
+/* ==========================================================
+   STRONG
+========================================================== */
+
+strong{
+
+    font-weight:var(--font-bold);
+
+}
+
+/* ==========================================================
+   CODE
+========================================================== */
+
+code{
+
+    direction:ltr;
+
+    font-family:Consolas,monospace;
+
+}
+
+/* ==========================================================
+   FONT WEIGHT
+========================================================== */
+
+.fw-thin{font-weight:var(--font-thin);}
+.fw-light{font-weight:var(--font-light);}
+.fw-normal{font-weight:var(--font-normal);}
+.fw-medium{font-weight:var(--font-medium);}
+.fw-semibold{font-weight:var(--font-semibold);}
+.fw-bold{font-weight:var(--font-bold);}
+.fw-extrabold{font-weight:var(--font-extra-bold);}
+.fw-black{font-weight:var(--font-black);}
+
+/* ==========================================================
+   FONT SIZE
+========================================================== */
+
+.fs-2xs{font-size:var(--font-2xs);}
+.fs-xs{font-size:var(--font-xs);}
+.fs-sm{font-size:var(--font-sm);}
+.fs-md{font-size:var(--font-md);}
+.fs-lg{font-size:var(--font-lg);}
+.fs-xl{font-size:var(--font-xl);}
+.fs-2xl{font-size:var(--font-2xl);}
+.fs-3xl{font-size:var(--font-3xl);}
+.fs-4xl{font-size:var(--font-4xl);}
+.fs-5xl{font-size:var(--font-5xl);}
+.fs-6xl{font-size:var(--font-6xl);}
+.fs-7xl{font-size:var(--font-7xl);}
+.fs-8xl{font-size:var(--font-8xl);}
+.fs-9xl{font-size:var(--font-9xl);}
+
+/* ==========================================================
+   ALIGNMENT
+========================================================== */
+
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-justify{text-align:justify;}
+
+/* ==========================================================
+   LINE HEIGHT
+========================================================== */
+
+.lh-tight{line-height:var(--line-tight);}
+.lh-normal{line-height:var(--line-normal);}
+.lh-loose{line-height:var(--line-loose);}
+.lh-extra{line-height:var(--line-extra);}
+
+/* ==========================================================
+   LETTER SPACING
+========================================================== */
+
+.ls-tight{letter-spacing:var(--letter-tight);}
+.ls-normal{letter-spacing:var(--letter-normal);}
+.ls-wide{letter-spacing:var(--letter-wide);}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.no-select{
+
+    user-select:none;
+
+}
+
+.break-word{
+
+    word-break:break-word;
+
+}
+
+.nowrap{
+
+    white-space:nowrap;
+
+}
+
+.uppercase{
+
+    text-transform:uppercase;
+
+}
+
+.lowercase{
+
+    text-transform:lowercase;
+
+}
+
+.capitalize{
+
+    text-transform:capitalize;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    html{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    html{
+
+        font-size:13px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    html{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
+
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : shared-fonts.css
+   MODULE      : Shared
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   مدیریت فونت‌های سراسری سیستم
+
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-001                     */
+/* GOOGLE FONTS                                      */
+/* بارگذاری فونت‌های اصلی                            */
+/* ================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-002                     */
+/* ROOT FONT VARIABLES                               */
+/* متغیرهای فونت                                     */
+/* ================================================= */
+
+:root{
+
+    --font-primary:"Vazirmatn",sans-serif;
+
+    --font-secondary:Tahoma,sans-serif;
+
+    --font-monospace:Consolas,monospace;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-003                     */
+/* DEFAULT FONT                                      */
+/* فونت پیش‌فرض سیستم                                */
+/* ================================================= */
+
+html,
+body{
+
+    font-family:var(--font-primary);
+
+    font-size:16px;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-004                     */
+/* HEADING FONTS                                     */
+/* فونت تیترها                                       */
+/* ================================================= */
+
+h1{
+
+    font-size:2.25rem;
+
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:1.75rem;
+
+    font-weight:700;
+
+}
+
+h4{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+}
+
+h5{
+
+    font-size:1.25rem;
+
+    font-weight:600;
+
+}
+
+h6{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-005                     */
+/* PARAGRAPH                                         */
+/* فونت متن                                          */
+/* ================================================= */
+
+p{
+
+    font-size:1rem;
+
+    font-weight:400;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-006                     */
+/* SMALL TEXT                                        */
+/* فونت متن‌های کوچک                                 */
+/* ================================================= */
+
+small{
+
+    font-size:.875rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-007                     */
+/* STRONG TEXT                                       */
+/* متن برجسته                                        */
+/* ================================================= */
+
+strong{
+
+    font-weight:700;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-008                     */
+/* FORM ELEMENTS                                     */
+/* فونت فرم‌ها                                       */
+/* ================================================= */
+
+input,
+textarea,
+select,
+button{
+
+    font-family:var(--font-primary);
+
+    font-size:1rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-009                     */
+/* CODE FONT                                         */
+/* فونت کدها                                         */
+/* ================================================= */
+
+code,
+pre{
+
+    font-family:var(--font-monospace);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-FONTS-999                     */
+/* END VERSION : 0.0.1                               */
+/* پایان ماژول                                       */
+/* ================================================= */

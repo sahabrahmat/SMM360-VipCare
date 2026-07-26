@@ -1,0 +1,137 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "shared-rooms.json",
+        "module": "Shared",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "تعریف اتاق‌ها و واحدهای مرکز درمانی"
+    },
+
+    "rooms": [
+
+        {
+            "id": "ROOM-001",
+            "code": "RECEPTION",
+            "name": "پذیرش",
+            "module": "reception",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-002",
+            "code": "ASSISTANT",
+            "name": "اتاق دستیار",
+            "module": "assistant",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-003",
+            "code": "DOCTOR",
+            "name": "اتاق پزشک",
+            "module": "doctor",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-004",
+            "code": "TREATMENT",
+            "name": "اتاق درمان",
+            "module": "treatment",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-005",
+            "code": "ROSHANAK",
+            "name": "اتاق روشنک",
+            "module": "roshanak",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-006",
+            "code": "PHARMACY",
+            "name": "داروخانه",
+            "module": "pharmacy",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-007",
+            "code": "LABORATORY",
+            "name": "آزمایشگاه",
+            "module": "laboratory",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-008",
+            "code": "RADIOLOGY",
+            "name": "تصویربرداری",
+            "module": "radiology",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-009",
+            "code": "FINANCE",
+            "name": "امور مالی",
+            "module": "finance",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-010",
+            "code": "REPORTS",
+            "name": "گزارش‌ها",
+            "module": "reports",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-011",
+            "code": "AI",
+            "name": "هوش مصنوعی",
+            "module": "ai",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-012",
+            "code": "INFORMATICS",
+            "name": "انفورماتیک",
+            "module": "informatics",
+            "active": true
+        },
+
+        {
+            "id": "ROOM-013",
+            "code": "SETTINGS",
+            "name": "تنظیمات",
+            "module": "settings",
+            "active": true
+        }
+
+    ],
+
+    "settings": {
+
+        "defaultRoom": "RECEPTION",
+
+        "allowInactiveRooms": false
+
+    },
+
+    "endVersion": {
+
+        "version": "0.0.1",
+
+        "message": "پایان ماژول"
+
+    }
+}

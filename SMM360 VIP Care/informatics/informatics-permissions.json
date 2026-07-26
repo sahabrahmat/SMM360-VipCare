@@ -1,0 +1,146 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "informatics-permissions.json",
+        "module": "Informatics",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "مجوزهای دسترسی واحد انفورماتیک"
+    },
+
+    "sections": {
+        "SECTION-001": {
+            "name": "Module Information",
+            "title": "اطلاعات ماژول"
+        },
+
+        "SECTION-002": {
+            "name": "Dashboard Permissions",
+            "title": "مجوزهای داشبورد"
+        },
+
+        "SECTION-003": {
+            "name": "Users Permissions",
+            "title": "مجوزهای مدیریت کاربران"
+        },
+
+        "SECTION-004": {
+            "name": "Roles Permissions",
+            "title": "مجوزهای نقش‌ها"
+        },
+
+        "SECTION-005": {
+            "name": "Permissions Management",
+            "title": "مجوزهای دسترسی"
+        },
+
+        "SECTION-006": {
+            "name": "Sessions Permissions",
+            "title": "مجوزهای نشست کاربران"
+        },
+
+        "SECTION-007": {
+            "name": "Audit Permissions",
+            "title": "مجوزهای گزارش فعالیت"
+        },
+
+        "SECTION-008": {
+            "name": "API Permissions",
+            "title": "مجوزهای API"
+        },
+
+        "SECTION-009": {
+            "name": "Backup Permissions",
+            "title": "مجوزهای پشتیبان‌گیری"
+        },
+
+        "SECTION-010": {
+            "name": "Settings Permissions",
+            "title": "مجوزهای تنظیمات"
+        },
+
+        "SECTION-999": {
+            "name": "End Module",
+            "title": "پایان ماژول",
+            "version": "0.0.1"
+        }
+    },
+
+    "permissions": {
+
+        "dashboard": {
+            "title": "داشبورد",
+            "view": true,
+            "create": false,
+            "edit": false,
+            "delete": false
+        },
+
+        "users": {
+            "title": "کاربران",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": true
+        },
+
+        "roles": {
+            "title": "نقش‌ها",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": true
+        },
+
+        "permissions": {
+            "title": "مجوزها",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "sessions": {
+            "title": "نشست کاربران",
+            "view": true,
+            "create": false,
+            "edit": false,
+            "delete": true
+        },
+
+        "audit": {
+            "title": "گزارش فعالیت",
+            "view": true,
+            "create": false,
+            "edit": false,
+            "delete": false
+        },
+
+        "api": {
+            "title": "مدیریت API",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "backup": {
+            "title": "پشتیبان‌گیری",
+            "view": true,
+            "create": true,
+            "edit": false,
+            "delete": true
+        },
+
+        "settings": {
+            "title": "تنظیمات سیستم",
+            "view": true,
+            "create": false,
+            "edit": true,
+            "delete": false
+        }
+    }
+}

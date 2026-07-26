@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMM360 VIP Care | Login</title>
+
+    <meta name="description"
+          content="SMM360 VIP Care Enterprise System">
+
+    <meta name="author"
+          content="Dr. Seyed Mehdi Mohammadi">
+
+    <meta name="robots"
+          content="noindex,nofollow">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="icon"
+          href="../smm360-vip-care/assets/images/logo.png"
+          type="image/png">
+
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-card">
+
+        <!-- ============================== -->
+        <!-- Header                         -->
+        <!-- ============================== -->
+
+        <div class="login-header">
+
+            <img
+                src="../smm360-vip-care/assets/images/logo.png"
+                alt="SMM360 VIP Care"
+                class="login-logo">
+
+            <h1>
+
+                SMM360 VIP Care
+
+            </h1>
+
+            <h2>
+
+                آنالیز هوشمند عملکرد بدن بر پایه پروتکل اختصاصی
+
+            </h2>
+
+        </div>
+
+        <!-- ============================== -->
+        <!-- Date Time                      -->
+        <!-- ============================== -->
+
+        <div class="system-date">
+
+            <div id="currentDate"></div>
+
+            <div id="currentTime"></div>
+
+        </div>
+
+        <!-- ============================== -->
+        <!-- System Information             -->
+        <!-- ============================== -->
+
+        <div class="system-info">
+
+            <div class="info-item">
+
+                <span>
+
+                    نسخه نرم افزار
+
+                </span>
+
+                <strong>
+
+                    Version 0.0.1
+
+                </strong>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>
+
+                    وضعیت سیستم
+
+                </span>
+
+                <strong class="online">
+
+                    ● آماده سرویس
+
+                </strong>
+
+            </div>
+
+            <div class="info-item">
+
+                <span>
+
+                    Security
+
+                </span>
+
+                <strong>
+
+                    Enterprise Level
+
+                </strong>
+
+            </div>
+
+        </div>
+
+        <!-- ============================== -->
+        <!-- Login Form                     -->
+        <!-- ============================== -->
+
+        <form id="loginForm">
+
+            
+            <div class="input-group">
+
+                <label for="username">
+
+                    نام کاربری
+
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="نام کاربری"
+                    autocomplete="username"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="password">
+
+                    رمز عبور
+
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="رمز عبور"
+                    autocomplete="current-password"
+                    required>
+
+            </div>
+
+            <div class="show-password">
+
+                <input
+                    type="checkbox"
+                    id="showPassword">
+
+                <label for="showPassword">
+
+                    نمایش رمز عبور
+
+                </label>
+
+            </div>
+
+            <button
+                type="submit"
+                class="login-button">
+
+                ورود به آنالیز هوشمند
+
+            </button>
+
+        </form>
+
+        <!-- ============================== -->
+        <!-- Build Information              -->
+        <!-- ============================== -->
+
+        <div class="build-info">
+
+            <div>
+
+                Build : 2026.01.001
+
+            </div>
+
+            <div>
+
+                Enterprise Edition
+
+            </div>
+
+        </div>
+
+        <!-- ============================== -->
+        <!-- Session Status                 -->
+        <!-- ============================== -->
+
+        <div class="session-info">
+
+            <div>
+
+                سیستم آماده ورود کاربر
+
+            </div>
+
+            <div>
+
+                Session : Waiting...
+
+            </div>
+
+        </div>
+
+        
+        <!-- ============================== -->
+        <!-- Footer                         -->
+        <!-- ============================== -->
+
+        <div class="login-footer">
+
+            Version 0.0.1
+
+            <br>
+
+            SMM360 VIP Care Enterprise System
+
+        </div>
+
+        <div class="copyright">
+
+            کلیه حقوق مادی و معنوی این نرم افزار
+
+            <br>
+
+            متعلق به
+
+            <b>
+
+                SMM360 VIP Care
+
+            </b>
+
+            می باشد.
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- JavaScript                                -->
+<!-- ========================================= -->
+
+<script>
+
+function updateClock(){
+
+const now=new Date();
+
+document.getElementById("currentDate").innerHTML=
+now.toLocaleDateString('fa-IR');
+
+document.getElementById("currentTime").innerHTML=
+now.toLocaleTimeString('fa-IR');
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+const password=document.getElementById("password");
+
+const showPassword=document.getElementById("showPassword");
+
+showPassword.addEventListener("change",function(){
+
+password.type=this.checked?"text":"password";
+
+});
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.location.href="dashboard.html";
+
+});
+
+</script>
+
+</body>
+
+</html>

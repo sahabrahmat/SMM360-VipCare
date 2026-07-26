@@ -1,0 +1,101 @@
+{
+  "identity": {
+      "system": "SMM360 VIP Care",
+      "edition": "ENTERPRISE EDITION",
+      "fileName": "shared-languages.json",
+      "module": "Shared",
+      "version": "0.0.1",
+      "author": "Dr. Seyed Mehdi Mohammadi",
+      "project": "SMM360 VIP CARE",
+      "copyright": "© SMM360 VIP CARE",
+      "description": "زبان‌های پشتیبانی شده سیستم"
+  },
+
+  "defaultLanguage": "fa",
+
+  "languages": [
+
+      {
+          "code": "fa",
+          "name": "فارسی",
+          "nativeName": "فارسی",
+          "direction": "rtl",
+          "locale": "fa-IR",
+          "calendar": "jalali",
+          "enabled": true
+      },
+
+      {
+          "code": "en",
+          "name": "English",
+          "nativeName": "English",
+          "direction": "ltr",
+          "locale": "en-US",
+          "calendar": "gregorian",
+          "enabled": true
+      },
+
+      {
+          "code": "ar",
+          "name": "Arabic",
+          "nativeName": "العربية",
+          "direction": "rtl",
+          "locale": "ar-SA",
+          "calendar": "hijri",
+          "enabled": true
+      }
+
+  ],
+
+  "settings": {
+
+      "allowLanguageChange": true,
+
+      "rememberUserLanguage": true,
+
+      "fallbackLanguage": "fa"
+
+  },
+
+
+  "messages": {
+
+    "loading": {
+
+        "fa": "در حال بارگذاری...",
+
+        "en": "Loading...",
+
+        "ar": "جاري التحميل..."
+
+    },
+
+    "save": {
+
+        "fa": "ذخیره شد.",
+
+        "en": "Saved successfully.",
+
+        "ar": "تم الحفظ."
+
+    },
+
+    "error": {
+
+        "fa": "خطایی رخ داده است.",
+
+        "en": "An error has occurred.",
+
+        "ar": "حدث خطأ."
+
+    }
+
+    },
+
+   "endVersion": {
+
+    "version": "0.0.1",
+
+    "message": "پایان ماژول"
+
+    }

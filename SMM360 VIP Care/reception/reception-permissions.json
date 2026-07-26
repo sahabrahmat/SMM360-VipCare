@@ -1,0 +1,37 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "reception-permissions.json",
+        "module": "Reception",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "مجوزهای واحد پذیرش"
+    },
+
+    "sections": {
+        "SECTION-001": { "name": "Module Information", "title": "اطلاعات ماژول" },
+        "SECTION-002": { "name": "Reception Permissions", "title": "مجوزهای پذیرش" },
+        "SECTION-999": { "name": "End Module", "title": "پایان ماژول", "version": "0.0.1" }
+    },
+
+    "permissions": {
+
+        "dashboard":{"title":"داشبورد","view":true,"create":false,"edit":false,"delete":false},
+
+        "patients":{"title":"پرونده سلامتجو","view":true,"create":true,"edit":true,"delete":false},
+
+        "appointments":{"title":"نوبت‌دهی","view":true,"create":true,"edit":true,"delete":true},
+
+        "queue":{"title":"صف انتظار","view":true,"create":true,"edit":true,"delete":true},
+
+        "payments":{"title":"دریافت وجه","view":true,"create":true,"edit":true,"delete":false},
+
+        "reports":{"title":"گزارش‌ها","view":true,"create":false,"edit":false,"delete":false},
+
+        "settings":{"title":"تنظیمات","view":true,"create":false,"edit":true,"delete":false}
+
+    }
+}

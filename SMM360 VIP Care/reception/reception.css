@@ -1,0 +1,2213 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : reception.css
+   MODULE      : Reception
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   استایل اصلی ماژول پذیرش سلامتجو
+
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-001                    */
+/* ریست اختصاصی ماژول                                */
+/* ================================================= */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    direction:rtl;
+    scroll-behavior:smooth;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-002                    */
+/* متغیرهای اختصاصی ماژول                            */
+/* ================================================= */
+
+:root{
+
+    --reception-header-height:72px;
+    --reception-sidebar-width:280px;
+    --reception-footer-height:42px;
+
+    --reception-card-radius:14px;
+    --reception-input-radius:10px;
+    --reception-button-radius:10px;
+
+    --reception-gap-xs:6px;
+    --reception-gap-sm:10px;
+    --reception-gap-md:16px;
+    --reception-gap-lg:24px;
+    --reception-gap-xl:32px;
+
+    --reception-transition:.25s;
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-003                    */
+/* پوسته اصلی سیستم                                  */
+/* ================================================= */
+
+.application-shell{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.system-layout{
+
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+
+}
+
+.workspace{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-004                    */
+/* فضای کاری ماژول                                   */
+/* ================================================= */
+
+.reception-workspace{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:var(--reception-gap-lg);
+
+    overflow:auto;
+
+    padding:var(--reception-gap-lg);
+
+}
+
+.reception-content{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,3fr)
+        minmax(320px,1fr);
+
+    gap:var(--reception-gap-lg);
+
+    width:100%;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-005                    */
+/* ستون‌های اصلی                                     */
+/* ================================================= */
+
+.content-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--reception-gap-md);
+
+    min-width:0;
+
+}
+
+.content-column-main{
+
+    width:100%;
+
+}
+
+.content-column-side{
+
+    width:100%;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-006                    */
+/* کانتینرهای پایه                                   */
+/* ================================================= */
+
+section{
+
+    width:100%;
+
+}
+
+.card{
+
+    width:100%;
+
+    border-radius:var(--reception-card-radius);
+
+    overflow:hidden;
+
+}
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:56px;
+
+    padding:0 var(--reception-gap-md);
+
+}
+
+.card-body{
+
+    padding:var(--reception-gap-md);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-007                    */
+/* گروه‌های چینش                                     */
+/* ================================================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+    gap:var(--reception-gap-md);
+
+}
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:var(--reception-gap-md);
+
+}
+
+.identity-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:var(--reception-gap-md);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-008                    */
+/* نوار عملیات                                       */
+/* ================================================= */
+
+.action-group{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--reception-gap-sm);
+
+}
+
+.quick-action-bar{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--reception-gap-md);
+
+    justify-content:flex-end;
+
+}
+
+/* ==========================================================
+   DESCRIPTION :
+   Sidebar ، Navigation و Dashboard Header
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-009                    */
+/* سایدبار اصلی                                      */
+/* ================================================= */
+
+.sidebar{
+
+    width:var(--reception-sidebar-width);
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+}
+
+.sidebar.collapsed{
+
+    width:72px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-010                    */
+/* برند سامانه                                       */
+/* ================================================= */
+
+.sidebar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--reception-gap-md);
+
+    padding:20px;
+
+}
+
+.sidebar-brand img{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+}
+
+.brand-information{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.brand-information h2{
+
+    font-size:1rem;
+
+}
+
+.brand-information span{
+
+    font-size:.80rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-011                    */
+/* اطلاعات کاربر                                     */
+/* ================================================= */
+
+.sidebar-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:20px;
+
+}
+
+.sidebar-user img{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.sidebar-user div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-012                    */
+/* منوی ناوبری                                       */
+/* ================================================= */
+
+.sidebar-navigation{
+
+    flex:1;
+
+    overflow:auto;
+
+}
+
+.sidebar-navigation ul{
+
+    list-style:none;
+
+}
+
+.sidebar-navigation li{
+
+    width:100%;
+
+}
+
+.sidebar-navigation a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 20px;
+
+    text-decoration:none;
+
+    transition:var(--reception-transition);
+
+}
+
+.sidebar-navigation li.active a{
+
+    font-weight:600;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-013                    */
+/* فوتر سایدبار                                      */
+/* ================================================= */
+
+.sidebar-footer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:20px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-014                    */
+/* هدر داشبورد                                       */
+/* ================================================= */
+
+.dashboard-header{
+
+    min-height:var(--reception-header-height);
+
+    display:grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        auto
+        auto;
+
+    align-items:center;
+
+    gap:var(--reception-gap-md);
+
+    padding:16px 24px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-015                    */
+/* عنوان صفحه                                        */
+/* ================================================= */
+
+.header-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.header-title div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.header-title h1{
+
+    font-size:1.25rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-016                    */
+/* مسیر صفحه                                         */
+/* ================================================= */
+
+.header-breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-017                    */
+/* وضعیت سامانه                                      */
+/* ================================================= */
+
+.header-status{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+}
+
+.status-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    text-align:center;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-018                    */
+/* تاریخ و ساعت                                      */
+/* ================================================= */
+
+.header-clock{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:4px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-019                    */
+/* اعلان‌ها                                          */
+/* ================================================= */
+
+.header-notification{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+#notificationCounter{
+
+    position:absolute;
+
+    top:-6px;
+
+    inset-inline-end:-6px;
+
+    min-width:18px;
+
+    min-height:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:.75rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-020                    */
+/* پروفایل کاربر                                     */
+/* ================================================= */
+
+.header-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.header-profile img{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.header-profile div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-021                    */
+/* واکنش‌گرایی هدر و سایدبار                         */
+/* ================================================= */
+
+@media (max-width:1200px){
+
+    .dashboard-header{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+    .header-status{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .sidebar{
+
+        width:72px;
+
+    }
+
+    .brand-information,
+
+    .sidebar-user div,
+
+    .sidebar-footer{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================================
+   DESCRIPTION :
+   Card ها، Grid ها، Form ها و Button ها
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-022                    */
+/* کارت‌ها                                           */
+/* ================================================= */
+
+.card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    min-width:0;
+
+}
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--reception-gap-md);
+
+    min-height:60px;
+
+    padding:18px 22px;
+
+}
+
+.card-header h2{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+.card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--reception-gap-md);
+
+    padding:22px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-023                    */
+/* Grid های عمومی                                    */
+/* ================================================= */
+
+.form-grid,
+
+.summary-grid,
+
+.identity-grid,
+
+.status-grid,
+
+.dashboard-grid{
+
+    display:grid;
+
+    gap:var(--reception-gap-md);
+
+}
+
+.form-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+}
+
+.summary-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+}
+
+.identity-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+}
+
+.status-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+}
+
+.dashboard-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-024                    */
+/* گروه‌های فرم                                      */
+/* ================================================= */
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    width:100%;
+
+}
+
+.form-group.full-width{
+
+    grid-column:1/-1;
+
+}
+
+.form-group label{
+
+    font-size:.90rem;
+
+    font-weight:500;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-025                    */
+/* کنترل‌های فرم                                     */
+/* ================================================= */
+
+input,
+
+select,
+
+textarea{
+
+    width:100%;
+
+    min-height:44px;
+
+    padding:10px 14px;
+
+    border-radius:var(--reception-input-radius);
+
+    outline:none;
+
+    resize:vertical;
+
+    transition:var(--reception-transition);
+
+    font:inherit;
+
+}
+
+textarea{
+
+    min-height:110px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-026                    */
+/* گروه جستجو                                        */
+/* ================================================= */
+
+.search-toolbar{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    gap:var(--reception-gap-sm);
+
+}
+
+.search-toolbar input{
+
+    flex:1;
+
+    min-width:260px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-027                    */
+/* دکمه‌ها                                           */
+/* ================================================= */
+
+button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    min-height:42px;
+
+    padding:0 18px;
+
+    border-radius:var(--reception-button-radius);
+
+    cursor:pointer;
+
+    transition:var(--reception-transition);
+
+    font:inherit;
+
+}
+
+button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-028                    */
+/* گروه عملیات                                       */
+/* ================================================= */
+
+.action-group{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.quick-action-bar{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-029                    */
+/* کارت‌های خلاصه                                    */
+/* ================================================= */
+
+.summary-grid > div,
+
+.identity-grid > div,
+
+.status-grid > div,
+
+.dashboard-grid > div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    padding:16px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-030                    */
+/* ردیف‌های اطلاعات                                  */
+/* ================================================= */
+
+.status-item,
+
+.overview-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    min-height:80px;
+
+}
+
+.status-item strong,
+
+.overview-item strong{
+
+    font-size:1.20rem;
+
+    font-weight:700;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-031                    */
+/* واکنش‌گرایی فرم‌ها                                */
+/* ================================================= */
+
+@media (max-width:992px){
+
+    .form-grid,
+
+    .summary-grid,
+
+    .identity-grid,
+
+    .status-grid,
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .search-toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .action-group,
+
+    .quick-action-bar{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   DESCRIPTION :
+   Table ها، Queue، Timeline، Activity و Badge ها
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-032                    */
+/* جدول‌های عمومی                                    */
+/* ================================================= */
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:auto;
+
+}
+
+.table thead tr{
+
+    height:48px;
+
+}
+
+.table th,
+
+.table td{
+
+    padding:12px 16px;
+
+    text-align:right;
+
+    vertical-align:middle;
+
+    white-space:nowrap;
+
+}
+
+.table tbody tr{
+
+    transition:var(--reception-transition);
+
+}
+
+.table-responsive{
+
+    width:100%;
+
+    overflow:auto;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-033                    */
+/* صف سلامتجویان                                    */
+/* ================================================= */
+
+.queue-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--reception-gap-md);
+
+}
+
+.queue-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--reception-gap-md);
+
+    padding:16px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+.queue-information{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    flex:1;
+
+}
+
+.queue-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-034                    */
+/* Activity                                           */
+/* ================================================= */
+
+.activity-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    list-style:none;
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:14px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+.activity-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+    flex:1;
+
+}
+
+.activity-time{
+
+    font-size:.80rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-035                    */
+/* Timeline                                           */
+/* ================================================= */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.timeline-marker{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+
+    margin-top:6px;
+
+}
+
+.timeline-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.timeline-date{
+
+    font-size:.85rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-036                    */
+/* Badge ها                                          */
+/* ================================================= */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:70px;
+
+    min-height:26px;
+
+    padding:0 10px;
+
+    border-radius:999px;
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+}
+
+.badge-small{
+
+    min-width:22px;
+
+    min-height:22px;
+
+    padding:0 6px;
+
+}
+
+.badge-large{
+
+    min-width:90px;
+
+    min-height:34px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-037                    */
+/* وضعیت‌های صف                                      */
+/* ================================================= */
+
+.queue-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.queue-number{
+
+    min-width:48px;
+
+    text-align:center;
+
+    font-weight:700;
+
+}
+
+.queue-priority{
+
+    font-weight:600;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-038                    */
+/* پنل وضعیت                                         */
+/* ================================================= */
+
+.dashboard-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    min-height:90px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+.dashboard-item strong{
+
+    font-size:1.30rem;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-039                    */
+/* اسکرول داخلی                                      */
+/* ================================================= */
+
+.scroll-area{
+
+    overflow:auto;
+
+    max-height:500px;
+
+}
+
+.scroll-y{
+
+    overflow-y:auto;
+
+}
+
+.scroll-x{
+
+    overflow-x:auto;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-040                    */
+/* واکنش‌گرایی جدول‌ها                               */
+/* ================================================= */
+
+@media (max-width:992px){
+
+    .table{
+
+        min-width:900px;
+
+    }
+
+    .queue-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .queue-actions{
+
+        width:100%;
+
+    }
+
+    .queue-actions button{
+
+        flex:1;
+
+    }
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION :
+   Dialog ، Modal ، Drawer ، Notification و Alert
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-041                    */
+/* Dialog                                            */
+/* ================================================= */
+
+dialog{
+
+    width:min(700px,90vw);
+
+    margin:auto;
+
+    border:none;
+
+    border-radius:var(--reception-card-radius);
+
+    padding:0;
+
+}
+
+dialog::backdrop{
+
+    backdrop-filter:blur(4px);
+
+}
+
+dialog header,
+
+dialog footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 24px;
+
+}
+
+dialog section{
+
+    padding:24px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-042                    */
+/* Modal                                             */
+/* ================================================= */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:9000;
+
+}
+
+.modal-overlay.active{
+
+    display:flex;
+
+}
+
+.modal-container{
+
+    width:min(900px,92vw);
+
+    max-height:90vh;
+
+    overflow:auto;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-043                    */
+/* Drawer                                            */
+/* ================================================= */
+
+.drawer{
+
+    position:fixed;
+
+    top:0;
+
+    bottom:0;
+
+    width:380px;
+
+    overflow:auto;
+
+    z-index:8500;
+
+    transition:var(--reception-transition);
+
+}
+
+#leftDrawer{
+
+    inset-inline-start:-380px;
+
+}
+
+#rightDrawer{
+
+    inset-inline-end:-380px;
+
+}
+
+#leftDrawer.active{
+
+    inset-inline-start:0;
+
+}
+
+#rightDrawer.active{
+
+    inset-inline-end:0;
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-044                    */
+/* Notification                                      */
+/* ================================================= */
+
+.notification-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    list-style:none;
+
+}
+
+.notification-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:16px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+.notification-content{
+
+    flex:1;
+
+}
+
+.notification-time{
+
+    font-size:.80rem;
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-045                    */
+/* Toast Notification                                */
+/* ================================================= */
+
+.toast-container{
+
+    position:fixed;
+
+    top:20px;
+
+    inset-inline-end:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:9500;
+
+}
+
+.toast{
+
+    min-width:320px;
+
+    padding:16px 20px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-046                    */
+/* Alert                                             */
+/* ================================================= */
+
+.alert-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.alert{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:16px;
+
+    border-radius:var(--reception-card-radius);
+
+}
+
+.alert-icon{
+
+    flex-shrink:0;
+
+}
+
+.alert-content{
+
+    flex:1;
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-047                    */
+/* Loading Overlay                                   */
+/* ================================================= */
+
+.global-loading{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:10000;
+
+}
+
+.loading-container{
+
+    width:min(420px,90vw);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+.loading-progress{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+#loadingProgressBar{
+
+    width:0;
+
+    height:100%;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-048                    */
+/* لایه‌های پویا                                     */
+/* ================================================= */
+
+#globalNotificationContainer,
+
+#globalModalContainer,
+
+#dynamicComponentContainer,
+
+#floatingPanelContainer,
+
+#temporaryViewContainer,
+
+#printContainer,
+
+#exportContainer{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:8000;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-049                    */
+/* واکنش‌گرایی                                       */
+/* ================================================= */
+
+@media (max-width:992px){
+
+    .drawer{
+
+        width:100%;
+
+    }
+
+    #leftDrawer{
+
+        inset-inline-start:-100%;
+
+    }
+
+    #rightDrawer{
+
+        inset-inline-end:-100%;
+
+    }
+
+    .modal-container{
+
+        width:96vw;
+
+    }
+
+    dialog{
+
+        width:96vw;
+
+    }
+
+    .toast{
+
+        min-width:unset;
+
+        width:92vw;
+
+    }
+
+}
+
+/* ==========================================================
+   DESCRIPTION :
+   Footer ، Responsive ، Utility Classes و پایان فایل
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-050                    */
+/* Footer ماژول                                      */
+/* ================================================= */
+
+.module-footer{
+
+    min-height:var(--reception-footer-height);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--reception-gap-md);
+
+    padding:0 24px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-left,
+
+.footer-center,
+
+.footer-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.footer-right{
+
+    justify-content:flex-end;
+
+    margin-inline-start:auto;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-051                    */
+/* کلاس‌های کمکی فاصله                               */
+/* ================================================= */
+
+.mt-xs{margin-top:var(--reception-gap-xs);}
+.mt-sm{margin-top:var(--reception-gap-sm);}
+.mt-md{margin-top:var(--reception-gap-md);}
+.mt-lg{margin-top:var(--reception-gap-lg);}
+
+.mb-xs{margin-bottom:var(--reception-gap-xs);}
+.mb-sm{margin-bottom:var(--reception-gap-sm);}
+.mb-md{margin-bottom:var(--reception-gap-md);}
+.mb-lg{margin-bottom:var(--reception-gap-lg);}
+
+.p-xs{padding:var(--reception-gap-xs);}
+.p-sm{padding:var(--reception-gap-sm);}
+.p-md{padding:var(--reception-gap-md);}
+.p-lg{padding:var(--reception-gap-lg);}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-052                    */
+/* کلاس‌های Flex                                     */
+/* ================================================= */
+
+.d-flex{
+
+    display:flex;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.flex-1{
+
+    flex:1;
+
+}
+
+.gap-sm{
+
+    gap:var(--reception-gap-sm);
+
+}
+
+.gap-md{
+
+    gap:var(--reception-gap-md);
+
+}
+
+.gap-lg{
+
+    gap:var(--reception-gap-lg);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-053                    */
+/* کلاس‌های Grid                                     */
+/* ================================================= */
+
+.d-grid{
+
+    display:grid;
+
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.grid-auto{
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-054                    */
+/* کلاس‌های نمایش                                    */
+/* ================================================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.visible{
+
+    display:block !important;
+
+}
+
+.invisible{
+
+    visibility:hidden;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+.h-100{
+
+    height:100%;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-055                    */
+/* کلاس‌های وضعیت                                    */
+/* ================================================= */
+
+.is-loading{
+
+    pointer-events:none;
+
+}
+
+.is-active{
+
+    display:flex;
+
+}
+
+.is-hidden{
+
+    display:none;
+
+}
+
+.is-disabled{
+
+    pointer-events:none;
+
+    opacity:.6;
+
+}
+
+.is-selected{
+
+    font-weight:600;
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-056                    */
+/* Responsive                                         */
+/* ================================================= */
+
+@media (max-width:1200px){
+
+    .grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .grid-3,
+
+    .grid-4,
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .module-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .footer-right{
+
+        margin-inline-start:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .application-shell,
+
+    .workspace,
+
+    .reception-workspace{
+
+        overflow:auto;
+
+    }
+
+    .card-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .footer-left,
+
+    .footer-center,
+
+    .footer-right{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+/* ================================================= */
+/* SECTION ID : RECEPTION-CSS-999                    */
+/* END VERSION : 0.0.1                               */
+/* پایان ماژول                                       */
+/* ================================================= */

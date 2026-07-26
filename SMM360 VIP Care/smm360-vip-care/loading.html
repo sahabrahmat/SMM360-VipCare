@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<!-- ==========================================================
+     SMM360 VIP Care
+     ENTERPRISE EDITION
+
+     FILE NAME   : loading.html
+     MODULE      : Shared
+     VERSION     : 0.0.1
+
+     AUTHOR      : Dr. Seyed Mehdi Mohammadi
+     PROJECT     : SMM360 VIP CARE
+     COPYRIGHT   : © SMM360 VIP CARE
+
+     DESCRIPTION :
+     صفحه بارگذاری سراسری سیستم
+
+========================================================== -->
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : SHARED-LOADING-001                   -->
+    <!-- اطلاعات اولیه صفحه                               -->
+    <!-- ================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        SMM360 VIP Care | Loading
+
+    </title>
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : SHARED-LOADING-002                   -->
+    <!-- فایل‌های استایل                                  -->
+    <!-- ================================================= -->
+
+    <link rel="stylesheet"
+          href="shared.css">
+
+    <link rel="stylesheet"
+          href="shared-layout.css">
+
+    <link rel="stylesheet"
+          href="shared-colors.css">
+
+    <link rel="stylesheet"
+          href="shared-fonts.css">
+
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- SECTION ID : SHARED-LOADING-003                   -->
+<!-- لایه اصلی بارگذاری سیستم                         -->
+<!-- ================================================= -->
+
+<div id="sharedLoader"
+     class="loading-screen">
+
+    <!-- ================================================= -->
+    <!-- لوگو سیستم                                       -->
+    <!-- ================================================= -->
+
+    <div class="loading-logo">
+
+        <img src="../smm360-vip-care/assets/images/logo.png"
+             alt="SMM360 VIP Care">
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- انیمیشن بارگذاری                                 -->
+    <!-- ================================================= -->
+
+    <div class="loading-spinner">
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- عنوان سیستم                                      -->
+    <!-- ================================================= -->
+
+    <h1>
+
+        SMM360 VIP Care
+
+    </h1>
+
+
+    <!-- ================================================= -->
+    <!-- توضیح وضعیت بارگذاری                             -->
+    <!-- ================================================= -->
+
+    <p id="loadingMessage">
+
+        در حال آماده‌سازی سیستم...
+
+    </p>
+
+
+    <!-- ================================================= -->
+    <!-- نوار پیشرفت                                      -->
+    <!-- ================================================= -->
+
+    <div class="loading-progress">
+
+        <div class="loading-progress-bar"
+             id="loadingBar">
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- درصد پیشرفت                                      -->
+    <!-- ================================================= -->
+
+    <span id="loadingPercent">
+
+        0%
+
+    </span>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SECTION ID : SHARED-LOADING-004                   -->
+<!-- فایل‌های جاوااسکریپت                             -->
+<!-- ================================================= -->
+
+<script src="shared-loader.js"></script>
+
+<script src="shared-utils.js"></script>
+
+
+<!-- ================================================= -->
+<!-- SECTION ID : SHARED-LOADING-005                   -->
+<!-- اجرای اولیه صفحه                                 -->
+<!-- ================================================= -->
+
+<script>
+
+let percent = 0;
+
+const bar = document.getElementById("loadingBar");
+
+const text = document.getElementById("loadingPercent");
+
+const timer = setInterval(function(){
+
+    percent++;
+
+    bar.style.width = percent + "%";
+
+    text.innerHTML = percent + "%";
+
+    if(percent >= 100){
+
+        clearInterval(timer);
+
+    }
+
+},20);
+
+</script>
+
+</body>
+
+<!-- ================================================= -->
+<!-- SECTION ID : SHARED-LOADING-999                   -->
+<!-- END VERSION : 0.0.1                               -->
+<!-- پایان ماژول                                      -->
+<!-- ================================================= -->
+
+</html>

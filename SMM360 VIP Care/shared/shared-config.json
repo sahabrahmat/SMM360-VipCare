@@ -1,0 +1,74 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "shared-config.json",
+        "module": "Shared",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "تنظیمات اصلی و سراسری سیستم"
+    },
+
+    "system": {
+        "name": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "version": "0.0.1",
+        "environment": "Development",
+        "language": "fa-IR",
+        "direction": "rtl",
+        "timezone": "Asia/Tehran"
+    },
+
+    "application": {
+        "title": "SMM360 VIP Care",
+        "subtitle": "Medical Intelligence Platform",
+        "organization": "SMM360 VIP CARE"
+    },
+
+    "api": {
+        "baseUrl": "",
+        "timeout": 30000
+    },
+
+    "database": {
+        "enabled": false,
+        "provider": "",
+        "databaseName": ""
+    },
+
+    "security": {
+        "authentication": true,
+        "authorization": true,
+        "sessionTimeout": 30
+    },
+
+    "localization": {
+        "defaultLanguage": "fa",
+        "defaultDirection": "rtl",
+        "calendar": "jalali"
+    },
+
+    "features": {
+        "backup": true,
+        "audit": true,
+        "notifications": true,
+        "reports": true
+    },
+
+    "logging": {
+        "enabled": true,
+        "level": "info"
+    },
+
+    "status": {
+        "active": true,
+        "maintenanceMode": false
+    },
+
+    "endVersion": {
+        "version": "0.0.1",
+        "message": "پایان ماژول"
+    }
+}

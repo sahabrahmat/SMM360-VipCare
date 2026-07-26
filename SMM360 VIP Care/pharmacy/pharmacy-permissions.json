@@ -1,0 +1,133 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "pharmacy-permissions.json",
+        "module": "Pharmacy",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "مجوزهای دسترسی واحد داروخانه"
+    },
+
+    "sections": {
+        "SECTION-001": {
+            "name": "Module Information",
+            "title": "اطلاعات ماژول"
+        },
+
+        "SECTION-002": {
+            "name": "Dashboard Permissions",
+            "title": "مجوزهای داشبورد"
+        },
+
+        "SECTION-003": {
+            "name": "Medicine Permissions",
+            "title": "مجوزهای مدیریت داروها"
+        },
+
+        "SECTION-004": {
+            "name": "Prescription Permissions",
+            "title": "مجوزهای نسخه‌ها"
+        },
+
+        "SECTION-005": {
+            "name": "Inventory Permissions",
+            "title": "مجوزهای انبار دارو"
+        },
+
+        "SECTION-006": {
+            "name": "Purchase Permissions",
+            "title": "مجوزهای خرید دارو"
+        },
+
+        "SECTION-007": {
+            "name": "Sales Permissions",
+            "title": "مجوزهای فروش دارو"
+        },
+
+        "SECTION-008": {
+            "name": "Reports Permissions",
+            "title": "مجوزهای گزارش‌ها"
+        },
+
+        "SECTION-009": {
+            "name": "Settings Permissions",
+            "title": "مجوزهای تنظیمات"
+        },
+
+        "SECTION-999": {
+            "name": "End Module",
+            "title": "پایان ماژول",
+            "version": "0.0.1"
+        }
+    },
+
+    "permissions": {
+
+        "dashboard": {
+            "title": "داشبورد",
+            "view": true,
+            "create": false,
+            "edit": false,
+            "delete": false
+        },
+
+        "medicines": {
+            "title": "داروها",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": true
+        },
+
+        "prescriptions": {
+            "title": "نسخه‌ها",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "inventory": {
+            "title": "انبار دارو",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "purchases": {
+            "title": "خرید دارو",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "sales": {
+            "title": "فروش دارو",
+            "view": true,
+            "create": true,
+            "edit": true,
+            "delete": false
+        },
+
+        "reports": {
+            "title": "گزارش‌ها",
+            "view": true,
+            "create": false,
+            "edit": false,
+            "delete": false
+        },
+
+        "settings": {
+            "title": "تنظیمات",
+            "view": true,
+            "create": false,
+            "edit": true,
+            "delete": false
+        }
+    }
+}

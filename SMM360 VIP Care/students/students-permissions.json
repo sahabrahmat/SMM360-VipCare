@@ -1,0 +1,39 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "students-permissions.json",
+        "module": "Students",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "مجوزهای واحد دانشجویان"
+    },
+
+    "sections": {
+        "SECTION-001": { "name": "Module Information", "title": "اطلاعات ماژول" },
+        "SECTION-002": { "name": "Students Permissions", "title": "مجوزهای دانشجویان" },
+        "SECTION-999": { "name": "End Module", "title": "پایان ماژول", "version": "0.0.1" }
+    },
+
+    "permissions": {
+
+        "dashboard":{"title":"داشبورد","view":true,"create":false,"edit":false,"delete":false},
+
+        "students":{"title":"مدیریت دانشجویان","view":true,"create":true,"edit":true,"delete":true},
+
+        "courses":{"title":"دوره‌ها","view":true,"create":true,"edit":true,"delete":true},
+
+        "attendance":{"title":"حضور و غیاب","view":true,"create":true,"edit":true,"delete":false},
+
+        "scores":{"title":"نمرات","view":true,"create":true,"edit":true,"delete":false},
+
+        "certificates":{"title":"گواهینامه‌ها","view":true,"create":true,"edit":true,"delete":false},
+
+        "reports":{"title":"گزارش‌ها","view":true,"create":false,"edit":false,"delete":false},
+
+        "settings":{"title":"تنظیمات","view":true,"create":false,"edit":true,"delete":false}
+
+    }
+}

@@ -1,0 +1,500 @@
+{
+    "identity": "SMM360 VIP Care",
+    "version": "0.0.1",
+    "module": "Reception",
+    "fileName": "reception-config.json",
+    "description": "پیکربندی مرکزی ماژول پذیرش",
+    "config": {
+        "module": {
+            "name": "Reception",
+            "displayName": "پذیرش",
+            "version": "0.0.1",
+            "enabled": true
+        },
+        "general": {
+            "locale": "fa-IR",
+            "calendar": "persian",
+            "timezone": "Asia/Tehran",
+            "dateFormat": "YYYY/MM/DD",
+            "timeFormat": "HH:mm",
+            "firstDayOfWeek": 6
+        },
+        "healthSeeker": {
+            "entityName": "HealthSeeker",
+            "displayName": "سلامتجو",
+            "identifier": {
+                "prefix": "SMM360",
+                "separator": "-",
+                "year": {
+                    "calendar": "persian",
+                    "format": "YY",
+                    "length": 2
+                },
+                "month": {
+                    "calendar": "persian",
+                    "format": "MM",
+                    "length": 2
+                },
+                "sequence": {
+                    "length": 3,
+                    "start": 1,
+                    "monthlyReset": true,
+                    "zeroPadding": true
+                },
+                "format": "SMM360-YY-MM-SSS",
+                "example": "SMM360-05-04-001"
+            },
+            "privacy": {
+                "nationalId": false,
+                "nationalCode": false,
+                "identityDocuments": false
+            },
+            "status": {
+                "default": "ACTIVE",
+                "values": [
+                    "ACTIVE",
+                    "INACTIVE",
+                    "ARCHIVED"
+                ]
+            }
+        },
+        "visit": {
+            "entityName": "Visit",
+            "displayName": "ویزیت",
+            "identifier": {
+                "baseIdentifier": "healthSeekerId",
+                "suffixPrefix": "V",
+                "sequence": {
+                    "length": 2,
+                    "start": 1,
+                    "incrementPerVisit": true,
+                    "zeroPadding": true
+                },
+                "format": "HEALTH_SEEKER_ID-VNN",
+                "examples": [
+                    "SMM360-05-04-001-V01",
+                    "SMM360-05-04-001-V02",
+                    "SMM360-05-04-001-V03"
+                ]
+            },
+            "sequence": {
+                "scope": "healthSeeker",
+                "reset": false,
+                "incrementOnNewVisit": true
+            }
+        }
+    }
+}
+
+{
+    "config": {
+        "reception": {
+            "entityName": "Reception",
+            "displayName": "پذیرش",
+            "status": {
+                "default": "REGISTERED",
+                "values": [
+                    "REGISTERED",
+                    "WAITING",
+                    "IN_PROGRESS",
+                    "COMPLETED",
+                    "CANCELLED"
+                ]
+            },
+            "type": {
+                "default": "OUTPATIENT",
+                "values": [
+                    "OUTPATIENT",
+                    "EMERGENCY",
+                    "FOLLOW_UP",
+                    "REFERRAL"
+                ]
+            }
+        },
+        "healthSession": {
+            "entityName": "HealthSession",
+            "displayName": "جلسه سلامت",
+            "status": {
+                "default": "OPEN",
+                "values": [
+                    "OPEN",
+                    "IN_PROGRESS",
+                    "PAUSED",
+                    "COMPLETED",
+                    "CANCELLED"
+                ]
+            },
+            "type": {
+                "default": "CONSULTATION",
+                "values": [
+                    "CONSULTATION",
+                    "FOLLOW_UP",
+                    "ASSESSMENT",
+                    "PROCEDURE"
+                ]
+            }
+        },
+        "appointment": {
+            "entityName": "Appointment",
+            "displayName": "نوبت",
+            "defaultDuration": 30,
+            "status": {
+                "default": "SCHEDULED",
+                "values": [
+                    "SCHEDULED",
+                    "CONFIRMED",
+                    "WAITING",
+                    "IN_PROGRESS",
+                    "COMPLETED",
+                    "CANCELLED",
+                    "NO_SHOW"
+                ]
+            },
+            "priority": {
+                "default": "NORMAL",
+                "values": [
+                    "NORMAL",
+                    "URGENT",
+                    "EMERGENCY"
+                ]
+            }
+        },
+        "queue": {
+            "entityName": "HealthSeekerQueue",
+            "displayName": "صف سلامتجویان",
+            "status": {
+                "default": "WAITING",
+                "values": [
+                    "WAITING",
+                    "CALLED",
+                    "IN_SERVICE",
+                    "COMPLETED",
+                    "SKIPPED",
+                    "CANCELLED"
+                ]
+            },
+            "priority": {
+                "default": "NORMAL",
+                "values": [
+                    "NORMAL",
+                    "URGENT",
+                    "EMERGENCY"
+                ]
+            },
+            "ordering": {
+                "primary": "priority",
+                "secondary": "arrivalTime",
+                "direction": "ASC"
+            }
+        },
+        "doctor": {
+            "entityName": "Doctor",
+            "displayName": "پزشک",
+            "status": {
+                "default": "ACTIVE",
+                "values": [
+                    "ACTIVE",
+                    "INACTIVE",
+                    "ON_LEAVE"
+                ]
+            },
+            "availability": {
+                "default": "AVAILABLE",
+                "values": [
+                    "AVAILABLE",
+                    "BUSY",
+                    "UNAVAILABLE"
+                ]
+            }
+        },
+        "department": {
+            "entityName": "Department",
+            "displayName": "بخش",
+            "status": {
+                "default": "ACTIVE",
+                "values": [
+                    "ACTIVE",
+                    "INACTIVE"
+                ]
+            }
+        },
+        "room": {
+            "entityName": "Room",
+            "displayName": "اتاق",
+            "status": {
+                "default": "AVAILABLE",
+                "values": [
+                    "AVAILABLE",
+                    "OCCUPIED",
+                    "RESERVED",
+                    "MAINTENANCE",
+                    "UNAVAILABLE"
+                ]
+            }
+        },
+        "resource": {
+            "entityName": "Resource",
+            "displayName": "منبع",
+            "status": {
+                "default": "AVAILABLE",
+                "values": [
+                    "AVAILABLE",
+                    "ASSIGNED",
+                    "RESERVED",
+                    "IN_USE",
+                    "MAINTENANCE",
+                    "UNAVAILABLE"
+                ]
+            },
+            "types": [
+                "DOCTOR",
+                "DEPARTMENT",
+                "ROOM",
+                "EQUIPMENT"
+            ]
+        }
+    }
+}
+{
+    "config": {
+        "insurance": {
+            "entityName": "InsuranceCoverage",
+            "displayName": "پوشش بیمه",
+            "status": {
+                "default": "ACTIVE",
+                "values": [
+                    "ACTIVE",
+                    "INACTIVE",
+                    "EXPIRED",
+                    "SUSPENDED"
+                ]
+            },
+            "coverageTypes": [
+                "PRIMARY",
+                "SECONDARY",
+                "SUPPLEMENTARY"
+            ],
+            "verification": {
+                "required": true,
+                "status": [
+                    "PENDING",
+                    "VERIFIED",
+                    "REJECTED"
+                ]
+            }
+        },
+        "finance": {
+            "entityName": "Finance",
+            "displayName": "مالی",
+            "currency": "IRR",
+            "amountPrecision": 0,
+            "status": {
+                "default": "PENDING",
+                "values": [
+                    "PENDING",
+                    "PARTIALLY_PAID",
+                    "PAID",
+                    "REFUNDED",
+                    "CANCELLED"
+                ]
+            }
+        },
+        "payment": {
+            "entityName": "Payment",
+            "displayName": "پرداخت",
+            "methods": [
+                "CASH",
+                "CARD",
+                "TRANSFER",
+                "ONLINE",
+                "INSURANCE"
+            ],
+            "status": {
+                "default": "PENDING",
+                "values": [
+                    "PENDING",
+                    "PROCESSING",
+                    "SUCCESS",
+                    "FAILED",
+                    "REFUNDED",
+                    "CANCELLED"
+                ]
+            }
+        },
+        "invoice": {
+            "entityName": "Invoice",
+            "displayName": "صورتحساب",
+            "status": {
+                "default": "DRAFT",
+                "values": [
+                    "DRAFT",
+                    "ISSUED",
+                    "PARTIALLY_PAID",
+                    "PAID",
+                    "OVERDUE",
+                    "CANCELLED"
+                ]
+            },
+            "numbering": {
+                "enabled": true,
+                "unique": true
+            }
+        },
+        "healthRecord": {
+            "entityName": "HealthRecord",
+            "displayName": "پرونده سلامت",
+            "status": {
+                "default": "ACTIVE",
+                "values": [
+                    "ACTIVE",
+                    "INACTIVE",
+                    "ARCHIVED"
+                ]
+            },
+            "access": {
+                "auditRequired": true,
+                "readOnly": false
+            }
+        },
+        "history": {
+            "entityName": "VisitHistory",
+            "displayName": "سوابق مراجعات",
+            "sort": {
+                "field": "visitDate",
+                "direction": "DESC"
+            }
+        },
+        "activity": {
+            "entityName": "Activity",
+            "displayName": "فعالیت",
+            "types": [
+                "CREATE",
+                "UPDATE",
+                "VIEW",
+                "STATUS_CHANGE",
+                "PAYMENT",
+                "DOCUMENT",
+                "RECEPTION"
+            ]
+        },
+        "timeline": {
+            "entityName": "Timeline",
+            "displayName": "خط زمانی",
+            "sort": {
+                "field": "timestamp",
+                "direction": "DESC"
+            },
+            "eventTypes": [
+                "RECEPTION",
+                "VISIT",
+                "APPOINTMENT",
+                "PAYMENT",
+                "DOCUMENT",
+                "STATUS_CHANGE",
+                "ACTIVITY"
+            ]
+        }
+    }
+}
+{
+    "config": {
+        "audit": {
+            "entityName": "Audit",
+            "displayName": "حسابرسی",
+            "enabled": true,
+            "actions": [
+                "CREATE",
+                "READ",
+                "UPDATE",
+                "DELETE",
+                "ARCHIVE",
+                "RESTORE",
+                "LOGIN",
+                "LOGOUT",
+                "SEARCH",
+                "EXPORT"
+            ],
+            "results": [
+                "SUCCESS",
+                "FAILURE",
+                "DENIED"
+            ],
+            "severities": [
+                "INFORMATION",
+                "WARNING",
+                "CRITICAL"
+            ],
+            "retention": {
+                "enabled": true
+            }
+        },
+        "notification": {
+            "entityName": "Notification",
+            "displayName": "اعلان",
+            "enabled": true,
+            "types": [
+                "INFORMATION",
+                "SUCCESS",
+                "WARNING",
+                "ERROR"
+            ],
+            "defaultDuration": 5000,
+            "position": "TOP_RIGHT"
+        },
+        "alert": {
+            "entityName": "Alert",
+            "displayName": "هشدار",
+            "enabled": true,
+            "levels": [
+                "INFORMATION",
+                "WARNING",
+                "CRITICAL"
+            ],
+            "dismissible": true
+        },
+        "search": {
+            "enabled": true,
+            "minimumCharacters": 1,
+            "caseSensitive": false,
+            "trimWhitespace": true,
+            "debounce": 300
+        },
+        "filter": {
+            "enabled": true,
+            "allowMultiple": true,
+            "clearable": true
+        },
+        "pagination": {
+            "enabled": true,
+            "defaultPage": 1,
+            "defaultPageSize": 25,
+            "pageSizeOptions": [
+                10,
+                25,
+                50,
+                100
+            ],
+            "maximumPageSize": 500
+        },
+        "dialog": {
+            "enabled": true,
+            "closeOnEscape": true,
+            "closeOnBackdrop": false,
+            "focusTrap": true
+        },
+        "modal": {
+            "enabled": true,
+            "closeOnEscape": true,
+            "closeOnBackdrop": false,
+            "focusTrap": true
+        },
+        "drawer": {
+            "enabled": true,
+            "position": "RIGHT",
+            "closeOnEscape": true,
+            "closeOnBackdrop": true,
+            "focusTrap": true
+        }
+    },
+    "endVersion": "0.0.1"
+}

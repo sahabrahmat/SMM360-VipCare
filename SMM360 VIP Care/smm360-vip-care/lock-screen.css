@@ -1,0 +1,238 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : lock-screen.css
+   MODULE      : Security
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   استایل صفحه قفل سیستم
+
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-001                   */
+/* ROOT                                              */
+/* ================================================= */
+
+:root{
+    --navy:#07192f;
+    --gold:#d4af37;
+    --white:#ffffff;
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-002                   */
+/* RESET                                             */
+/* ================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    direction:rtl;
+
+    font-family:Tahoma,sans-serif;
+
+    background:
+    radial-gradient(circle,#173b69 0%,#07192f 60%,#04101d 100%);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:var(--white);
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-003                   */
+/* CARD                                              */
+/* ================================================= */
+
+.lock-card{
+
+    width:480px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:rgba(8,22,43,.90);
+
+    border:2px solid var(--gold);
+
+    border-radius:25px;
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-004                   */
+/* LOGO                                              */
+/* ================================================= */
+
+.logo img{
+
+    width:110px;
+
+    margin-bottom:20px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-005                   */
+/* PHOTO                                             */
+/* ================================================= */
+
+.photo img{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    border:4px solid var(--gold);
+
+    object-fit:cover;
+
+    box-shadow:0 0 25px rgba(212,175,55,.5);
+
+    margin-bottom:20px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-006                   */
+/* TITLES                                            */
+/* ================================================= */
+
+h1{
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+h2{
+
+    font-size:18px;
+
+    font-weight:normal;
+
+    margin-bottom:12px;
+
+}
+
+h3{
+
+    color:#dddddd;
+
+    margin-bottom:30px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-007                   */
+/* INPUT                                             */
+/* ================================================= */
+
+input{
+
+    width:100%;
+
+    height:50px;
+
+    border:1px solid #666;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    background:#102846;
+
+    color:white;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-008                   */
+/* BUTTON                                            */
+/* ================================================= */
+
+button{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(#f5d46b,#c79d1d);
+
+    color:#07192f;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(212,175,55,.6);
+
+}
+
+/* ================================================= */
+/* SECTION ID : LOCKSCREEN-CSS-009                   */
+/* FOOTER                                            */
+/* ================================================= */
+
+.footer{
+
+    margin-top:25px;
+
+    color:#cfcfcf;
+
+    font-size:13px;
+
+    line-height:28px;
+
+}

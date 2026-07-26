@@ -1,0 +1,145 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : shared-colors.css
+   MODULE      : Shared
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   رنگ‌های استاندارد و سراسری سیستم
+
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-001                    */
+/* PRIMARY COLORS                                    */
+/* رنگ‌های اصلی سیستم                                */
+/* ================================================= */
+
+:root{
+
+    --primary-color:#07192F;
+
+    --secondary-color:#0D2747;
+
+    --accent-color:#D4AF37;
+
+    --background-color:#F4F7FA;
+
+    --surface-color:#FFFFFF;
+
+    --text-color:#1F2937;
+
+    --text-light:#6B7280;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-002                    */
+/* STATUS COLORS                                     */
+/* رنگ‌های وضعیت                                     */
+/* ================================================= */
+
+:root{
+
+    --success-color:#16A34A;
+
+    --warning-color:#F59E0B;
+
+    --danger-color:#DC2626;
+
+    --info-color:#0EA5E9;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-003                    */
+/* BORDER COLORS                                     */
+/* رنگ خطوط و حاشیه‌ها                               */
+/* ================================================= */
+
+:root{
+
+    --border-color:#D1D5DB;
+
+    --border-dark:#9CA3AF;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-004                    */
+/* GRAY COLORS                                       */
+/* طیف خاکستری                                      */
+/* ================================================= */
+
+:root{
+
+    --gray-100:#F9FAFB;
+
+    --gray-200:#F3F4F6;
+
+    --gray-300:#E5E7EB;
+
+    --gray-400:#D1D5DB;
+
+    --gray-500:#9CA3AF;
+
+    --gray-600:#6B7280;
+
+    --gray-700:#4B5563;
+
+    --gray-800:#374151;
+
+    --gray-900:#111827;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-005                    */
+/* SHADOW COLORS                                     */
+/* رنگ سایه‌ها                                       */
+/* ================================================= */
+
+:root{
+
+    --shadow-light:rgba(0,0,0,.08);
+
+    --shadow-medium:rgba(0,0,0,.15);
+
+    --shadow-dark:rgba(0,0,0,.25);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-006                    */
+/* TRANSPARENT COLORS                                */
+/* رنگ‌های شفاف                                      */
+/* ================================================= */
+
+:root{
+
+    --white-transparent:rgba(255,255,255,.75);
+
+    --black-transparent:rgba(0,0,0,.35);
+
+    --gold-transparent:rgba(212,175,55,.20);
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-COLORS-999                    */
+/* END VERSION : 0.0.1                               */
+/* پایان ماژول                                       */
+/* ================================================= */

@@ -1,0 +1,482 @@
+{
+    "identity": "SMM360 VIP Care Terminology",
+    "version": "0.0.1",
+    "module": "shared",
+    "description": "واژه‌نامه رسمی پروژه SMM360 VIP Care",
+  
+    "terms": {
+  
+      "patient": {
+        "fa": "سلامتجو"
+      },
+  
+      "patientFile": {
+        "fa": "پرونده سلامت"
+      },
+  
+      "patientManagement": {
+        "fa": "مدیریت سلامت"
+      },
+  
+      "medicalRecord": {
+        "fa": "پرونده سلامت"
+      },
+  
+      "visit": {
+        "fa": "مراجعه"
+      },
+  
+      "healthSession": {
+        "fa": "جلسه سلامت"
+      },
+  
+      "reception": {
+        "fa": "پذیرش"
+      },
+  
+      "assistant": {
+        "fa": "دستیار"
+      },
+  
+      "doctor": {
+        "fa": "پزشک"
+      },
+  
+      "ai": {
+        "fa": "هوش مصنوعی"
+      },
+  
+      "roshanak": {
+        "fa": "اتاق درمان روشنک"
+      },
+  
+      "pharmacy": {
+        "fa": "دواخانه ریحانة المهدی"
+      },
+  
+      "warehouse": {
+        "fa": "تدارکات"
+      },
+  
+      "finance": {
+        "fa": "امور مالی"
+      },
+  
+      "informatics": {
+        "fa": "فناوری اطلاعات"
+      },
+  
+      "students": {
+        "fa": "دانشجویان و کارآموزان"
+      },
+  
+      "dashboard": {
+        "fa": "داشبورد"
+      },
+  
+      "healthReport": {
+        "fa": "گزارش سلامت"
+      },
+  
+      "healthHistory": {
+        "fa": "سوابق سلامت"
+      },
+  
+      "healthPlan": {
+        "fa": "برنامه سلامت"
+      },
+  
+      "treatmentPlan": {
+        "fa": "برنامه درمان"
+      },
+  
+      "nextSession": {
+        "fa": "جلسه بعد"
+      },
+  
+      "reasonForVisit": {
+        "fa": "دلیل مراجعه"
+      },
+  
+      "healthAssessment": {
+        "fa": "ارزیابی سلامت"
+      },
+  
+      "healthManagement": {
+        "fa": "مدیریت سلامت"
+      }
+  
+    },
+  
+    "terms": {
+
+        "patient": {
+          "fa": "سلامتجو",
+          "plural": "سلامتجویان",
+          "short": "سلامتجو",
+          "description": "فردی که برای حفظ، ارزیابی یا ارتقای سلامت به مرکز مراجعه می‌کند.",
+          "category": "health"
+        },
+    
+        "patientFile": {
+          "fa": "پرونده سلامت",
+          "plural": "پرونده‌های سلامت",
+          "short": "پرونده سلامت",
+          "description": "پرونده کامل اطلاعات سلامت سلامتجو.",
+          "category": "health"
+        },
+    
+        "healthRecord": {
+          "fa": "پرونده سلامت",
+          "plural": "پرونده‌های سلامت",
+          "short": "پرونده",
+          "description": "سوابق کامل سلامت.",
+          "category": "health"
+        },
+    
+        "healthHistory": {
+          "fa": "سوابق سلامت",
+          "plural": "سوابق سلامت",
+          "short": "سوابق",
+          "description": "سوابق درمان، ارزیابی و مراجعات.",
+          "category": "health"
+        },
+    
+        "healthManagement": {
+          "fa": "مدیریت سلامت",
+          "plural": "مدیریت سلامت",
+          "short": "مدیریت سلامت",
+          "description": "سامانه مدیریت سلامت سلامتجویان.",
+          "category": "system"
+        },
+    
+        "visit": {
+          "fa": "مراجعه",
+          "plural": "مراجعات",
+          "short": "مراجعه",
+          "description": "هر حضور سلامتجو در مرکز.",
+          "category": "workflow"
+        },
+    
+        "healthSession": {
+          "fa": "جلسه سلامت",
+          "plural": "جلسات سلامت",
+          "short": "جلسه",
+          "description": "هر جلسه درمان یا ارزیابی.",
+          "category": "workflow"
+        },
+    
+        "followUp": {
+          "fa": "جلسه بعد",
+          "plural": "جلسات بعد",
+          "short": "جلسه بعد",
+          "description": "زمان مراجعه بعدی.",
+          "category": "workflow"
+        },
+    
+        "reception": {
+          "fa": "پذیرش",
+          "plural": "پذیرش",
+          "short": "پذیرش",
+          "description": "واحد پذیرش سلامتجو.",
+          "category": "department"
+        },
+    
+        "assistant": {
+          "fa": "دستیار",
+          "plural": "دستیاران",
+          "short": "دستیار",
+          "description": "مسئول ثبت اطلاعات اولیه.",
+          "category": "department"
+        },
+    
+        "doctor": {
+          "fa": "پزشک",
+          "plural": "پزشکان",
+          "short": "پزشک",
+          "description": "مسئول تصمیم‌گیری درمان.",
+          "category": "department"
+        },
+    
+        "ai": {
+          "fa": "هوش مصنوعی",
+          "plural": "هوش مصنوعی",
+          "short": "AI",
+          "description": "سامانه تحلیل هوشمند.",
+          "category": "department"
+        },
+    
+        "roshanak": {
+          "fa": "اتاق درمان روشنک",
+          "plural": "اتاق‌های درمان روشنک",
+          "short": "روشنک",
+          "description": "مرکز اصلی ارزیابی و درمان.",
+          "category": "department"
+        },
+    
+        "pharmacy": {
+          "fa": "دواخانه ریحانة المهدی",
+          "plural": "دواخانه",
+          "short": "دواخانه",
+          "description": "تحویل دارو و فرآورده‌های درمانی.",
+          "category": "department"
+        },
+    
+        "warehouse": {
+          "fa": "تدارکات",
+          "plural": "تدارکات",
+          "short": "تدارکات",
+          "description": "مدیریت تجهیزات و اقلام مصرفی.",
+          "category": "department"
+        },
+    
+        "finance": {
+          "fa": "امور مالی",
+          "plural": "امور مالی",
+          "short": "مالی",
+          "description": "مدیریت پرداخت‌ها و حسابداری.",
+          "category": "department"
+        },
+    
+        "informatics": {
+          "fa": "فناوری اطلاعات",
+          "plural": "فناوری اطلاعات",
+          "short": "IT",
+          "description": "مدیریت سامانه و زیرساخت.",
+          "category": "department"
+        },
+    
+        "students": {
+          "fa": "دانشجویان و کارآموزان",
+          "plural": "دانشجویان و کارآموزان",
+          "short": "دانشجویان",
+          "description": "بخش آموزش.",
+          "category": "department"
+        },
+    
+        "ceo": {
+          "fa": "مدیرعامل",
+          "plural": "مدیران",
+          "short": "مدیرعامل",
+          "description": "بالاترین سطح مدیریتی.",
+          "category": "department"
+        },
+    
+        "dashboard": {
+          "fa": "داشبورد",
+          "plural": "داشبوردها",
+          "short": "داشبورد",
+          "description": "نمای کلی سامانه.",
+          "category": "system"
+        },
+    
+        "appointment": {
+          "fa": "نوبت",
+          "plural": "نوبت‌ها",
+          "short": "نوبت",
+          "description": "زمان برنامه‌ریزی شده مراجعه.",
+          "category": "workflow"
+        },
+    
+        "assessment": {
+          "fa": "ارزیابی سلامت",
+          "plural": "ارزیابی‌ها",
+          "short": "ارزیابی",
+          "description": "بررسی وضعیت سلامت.",
+          "category": "medical"
+        },
+    
+        "diagnosis": {
+          "fa": "تشخیص",
+          "plural": "تشخیص‌ها",
+          "short": "تشخیص",
+          "description": "نتیجه نهایی پزشک.",
+          "category": "medical"
+        },
+    
+        "treatmentPlan": {
+          "fa": "برنامه درمان",
+          "plural": "برنامه‌های درمان",
+          "short": "برنامه درمان",
+          "description": "طرح درمان سلامتجو.",
+          "category": "medical"
+        },
+    
+        "healthPlan": {
+          "fa": "برنامه سلامت",
+          "plural": "برنامه‌های سلامت",
+          "short": "برنامه سلامت",
+          "description": "برنامه ارتقای سلامت.",
+          "category": "medical"
+        },
+    
+        "prescription": {
+          "fa": "نسخه درمان",
+          "plural": "نسخه‌های درمان",
+          "short": "نسخه",
+          "description": "نسخه صادر شده توسط پزشک.",
+          "category": "medical"
+        },
+    
+        "healthReport": {
+          "fa": "گزارش سلامت",
+          "plural": "گزارش‌های سلامت",
+          "short": "گزارش",
+          "description": "خروجی نهایی سامانه.",
+          "category": "medical"
+        },
+    
+        "laboratory": {
+          "fa": "آزمایش",
+          "plural": "آزمایش‌ها",
+          "short": "آزمایش",
+          "description": "نتایج آزمایشگاهی.",
+          "category": "medical"
+        },
+    
+        "ultrasound": {
+          "fa": "سونوگرافی",
+          "plural": "سونوگرافی‌ها",
+          "short": "سونوگرافی",
+          "description": "تصویربرداری سونوگرافی.",
+          "category": "medical"
+        },
+    
+        "mri": {
+          "fa": "ام‌آر‌آی",
+          "plural": "ام‌آر‌آی",
+          "short": "MRI",
+          "description": "تصویربرداری MRI.",
+          "category": "medical"
+        },
+    
+        "ctScan": {
+          "fa": "سی‌تی‌اسکن",
+          "plural": "سی‌تی‌اسکن",
+          "short": "CT",
+          "description": "تصویربرداری CT.",
+          "category": "medical"
+        },
+    
+        "bodyScan": {
+          "fa": "اسکن بدن",
+          "plural": "اسکن‌های بدن",
+          "short": "اسکن",
+          "description": "اسکن کامل بدن در روشنک.",
+          "category": "roshanak"
+        },
+    
+        "sensors": {
+          "fa": "سنسورها",
+          "plural": "سنسورها",
+          "short": "سنسور",
+          "description": "تجهیزات اندازه‌گیری سلامت.",
+          "category": "roshanak"
+        },
+    
+        "painBefore": {
+          "fa": "درد قبل درمان",
+          "plural": "درد قبل درمان",
+          "short": "درد قبل",
+          "description": "ثبت شدت درد قبل از درمان.",
+          "category": "roshanak"
+        },
+    
+        "painAfter": {
+          "fa": "درد بعد درمان",
+          "plural": "درد بعد درمان",
+          "short": "درد بعد",
+          "description": "ثبت شدت درد بعد از درمان.",
+          "category": "roshanak"
+        },
+    
+        "lightTherapy": {
+          "fa": "نور درمانی",
+          "plural": "نور درمانی",
+          "short": "نور درمانی",
+          "description": "درمان با نور.",
+          "category": "roshanak"
+        },
+    
+        "magnetTherapy": {
+          "fa": "مغناطیس درمانی",
+          "plural": "مغناطیس درمانی",
+          "short": "مغناطیس",
+          "description": "درمان با میدان مغناطیسی.",
+          "category": "roshanak"
+        },
+    
+        "aromaTherapy": {
+          "fa": "رایحه درمانی",
+          "plural": "رایحه درمانی",
+          "short": "رایحه",
+          "description": "درمان با رایحه.",
+          "category": "roshanak"
+        },
+    
+        "frequencyTherapy": {
+          "fa": "فرکانس درمانی",
+          "plural": "فرکانس درمانی",
+          "short": "فرکانس",
+          "description": "درمان مبتنی بر فرکانس.",
+          "category": "roshanak"
+        },
+    
+        "inventory": {
+          "fa": "موجودی",
+          "plural": "موجودی‌ها",
+          "short": "موجودی",
+          "description": "موجودی تجهیزات.",
+          "category": "warehouse"
+        },
+    
+        "equipment": {
+          "fa": "تجهیزات",
+          "plural": "تجهیزات",
+          "short": "تجهیزات",
+          "description": "تجهیزات پزشکی.",
+          "category": "warehouse"
+        },
+    
+        "supplies": {
+          "fa": "اقلام مصرفی",
+          "plural": "اقلام مصرفی",
+          "short": "اقلام",
+          "description": "مواد و اقلام مصرفی.",
+          "category": "warehouse"
+        },
+    
+        "payment": {
+          "fa": "پرداخت",
+          "plural": "پرداخت‌ها",
+          "short": "پرداخت",
+          "description": "ثبت عملیات مالی.",
+          "category": "finance"
+        },
+    
+        "invoice": {
+          "fa": "صورتحساب",
+          "plural": "صورتحساب‌ها",
+          "short": "صورتحساب",
+          "description": "فاکتور مالی.",
+          "category": "finance"
+        },
+    
+        "insurance": {
+          "fa": "بیمه",
+          "plural": "بیمه‌ها",
+          "short": "بیمه",
+          "description": "اطلاعات بیمه.",
+          "category": "finance"
+        },
+    
+        "discount": {
+          "fa": "تخفیف",
+          "plural": "تخفیف‌ها",
+          "short": "تخفیف",
+          "description": "تخفیف مالی.",
+          "category": "finance"
+        }
+    
+      }
+  }

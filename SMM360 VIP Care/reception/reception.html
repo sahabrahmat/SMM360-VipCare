@@ -1,0 +1,3369 @@
+<!-- ==========================================================
+     SMM360 VIP Care
+     ENTERPRISE EDITION
+
+     FILE NAME   : reception.html
+     MODULE      : Reception
+     VERSION     : 0.0.1
+
+     AUTHOR      : Dr. Seyed Mehdi Mohammadi
+     PROJECT     : SMM360 VIP CARE
+     COPYRIGHT   : © SMM360 VIP CARE
+
+     DESCRIPTION :
+     صفحه اصلی ماژول پذیرش سلامتجو
+
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-001                   -->
+<!-- تنظیمات اولیه صفحه                                -->
+<!-- ================================================= -->
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible"
+      content="IE=edge">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="SMM360 VIP Care Reception Module">
+
+<meta name="author"
+      content="Dr. Seyed Mehdi Mohammadi">
+
+<meta name="application-name"
+      content="SMM360 VIP Care">
+
+<meta name="theme-color"
+      content="#FFFFFF">
+
+<meta name="robots"
+      content="noindex,nofollow">
+
+<title>
+
+SMM360 VIP Care | پذیرش سلامتجو
+
+</title>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-002                   -->
+<!-- فایل‌های CSS مشترک                               -->
+<!-- ================================================= -->
+
+<link rel="stylesheet"
+      href="../../Shared/shared-reset.css">
+
+<link rel="stylesheet"
+      href="../../Shared/shared-fonts.css">
+
+<link rel="stylesheet"
+      href="../../Shared/shared-layout.css">
+
+<link rel="stylesheet"
+      href="../../Shared/shared-components.css">
+
+<link rel="stylesheet"
+      href="../../Shared/shared-utilities.css">
+
+<link rel="stylesheet"
+      href="../../Shared/shared-responsive.css">
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-003                   -->
+<!-- فایل‌های CSS اختصاصی ماژول                        -->
+<!-- ================================================= -->
+
+<link rel="stylesheet"
+      href="./reception.css">
+
+<link rel="stylesheet"
+      href="./reception-responsive.css">
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-004                   -->
+<!-- فایل‌های JavaScript سراسری                        -->
+<!-- ================================================= -->
+
+<script defer
+        src="../../Shared/shared-config.js"></script>
+
+<script defer
+        src="../../Shared/shared-core.js"></script>
+
+<script defer
+        src="../../Shared/shared-router.js"></script>
+
+<script defer
+        src="../../Shared/shared-security.js"></script>
+
+<script defer
+        src="../../Shared/shared-api.js"></script>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-005                   -->
+<!-- فایل JavaScript اختصاصی ماژول                     -->
+<!-- ================================================= -->
+
+<script defer
+        src="./reception.js"></script>
+
+</head>
+
+<body>
+
+<!-- ادامه در Part 1.2 -->
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-006                   -->
+<!-- پوسته اصلی سامانه                                 -->
+<!-- ================================================= -->
+
+<div id="applicationShell"
+     class="application-shell">
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : RECEPTION-HTML-007                   -->
+    <!-- لایه بارگذاری سراسری                             -->
+    <!-- ================================================= -->
+
+    <div id="globalLoading"
+         class="global-loading">
+
+        <div class="loading-container">
+
+            <img
+                 src="../../Shared/Assets/Images/logo.svg"
+                 alt="SMM360 VIP Care">
+
+            <h1>
+
+                SMM360 VIP Care
+
+            </h1>
+
+            <p>
+
+                در حال آماده‌سازی سامانه...
+
+            </p>
+
+            <div class="loading-progress">
+
+                <div id="loadingProgressBar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : RECEPTION-HTML-008                   -->
+    <!-- لایه اعلان‌های سراسری                             -->
+    <!-- ================================================= -->
+
+    <div id="globalNotificationContainer"></div>
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : RECEPTION-HTML-009                   -->
+    <!-- لایه پنجره‌های سراسری                             -->
+    <!-- ================================================= -->
+
+    <div id="globalModalContainer"></div>
+
+    <!-- ================================================= -->
+    <!-- SECTION ID : RECEPTION-HTML-010                   -->
+    <!-- پوسته اصلی رابط کاربری                           -->
+    <!-- ================================================= -->
+
+    <div id="systemLayout"
+         class="system-layout">
+
+<!-- ادامه در Part 1.3 -->
+      <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-011                   -->
+        <!-- نوار کناری سامانه                                 -->
+        <!-- ================================================= -->
+
+        <aside id="sidebar"
+               class="sidebar">
+
+            <!-- ================================================= -->
+            <!-- SECTION ID : RECEPTION-HTML-012                   -->
+            <!-- هویت سامانه                                       -->
+            <!-- ================================================= -->
+
+            <div class="sidebar-brand">
+
+                <img src="../../Shared/Assets/Images/logo.svg"
+                     alt="SMM360">
+
+                <div class="brand-information">
+
+                    <h2>SMM360 VIP Care</h2>
+
+                    <span>Reception Module</span>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- SECTION ID : RECEPTION-HTML-013                   -->
+            <!-- اطلاعات کاربر                                     -->
+            <!-- ================================================= -->
+
+            <section class="sidebar-user">
+
+                <img src="../../Shared/Assets/Images/avatar-default.png"
+                     alt="User">
+
+                <div>
+
+                    <h3 id="currentUserName">
+
+                        —
+
+                    </h3>
+
+                    <small id="currentUserRole">
+
+                        —
+
+                    </small>
+
+                </div>
+
+            </section>
+
+            <!-- ================================================= -->
+            <!-- SECTION ID : RECEPTION-HTML-014                   -->
+            <!-- منوی اصلی                                         -->
+            <!-- ================================================= -->
+
+            <nav id="mainNavigation"
+                 class="sidebar-navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="../dashboard/dashboard.html">
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="reception.html">
+                            <span>پذیرش سلامتجو</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>جلسات سلامت</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>پزشکان</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>اتاق‌ها</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>امور مالی</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>گزارش‌ها</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>تنظیمات</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- ================================================= -->
+            <!-- SECTION ID : RECEPTION-HTML-015                   -->
+            <!-- اطلاعات نسخه                                      -->
+            <!-- ================================================= -->
+
+            <footer class="sidebar-footer">
+
+                <span>
+
+                    Enterprise Edition
+
+                </span>
+
+                <strong>
+
+                    Version 0.0.1
+
+                </strong>
+
+            </footer>
+
+        </aside>
+
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-016                   -->
+        <!-- آغاز فضای کاری                                     -->
+        <!-- ================================================= -->
+
+        <main id="workspace"
+              class="workspace">
+
+     <!-- ادامه در Part 1.4 -->
+
+             <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-017                   -->
+        <!-- هدر اصلی ماژول پذیرش                              -->
+        <!-- ================================================= -->
+
+        <header id="dashboardHeader"
+                class="dashboard-header">
+
+            <!-- اطلاعات صفحه -->
+
+            <section class="header-title">
+
+                <button id="sidebarToggleButton"
+                        type="button"
+                        aria-label="باز و بسته کردن منو">
+
+                    ☰
+
+                </button>
+
+                <div>
+
+                    <h1>
+
+                        پذیرش سلامتجو
+
+                    </h1>
+
+                    <p>
+
+                        مدیریت جلسات سلامت و فرآیند پذیرش
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- مسیر صفحه -->
+
+            <section class="header-breadcrumb">
+
+                <span>
+
+                    داشبورد
+
+                </span>
+
+                <span>
+
+                    /
+
+                </span>
+
+                <strong>
+
+                    پذیرش
+
+                </strong>
+
+            </section>
+
+            <!-- وضعیت سامانه -->
+
+            <section class="header-status">
+
+                <div class="status-item">
+
+                    <label>
+
+                        وضعیت سامانه
+
+                    </label>
+
+                    <strong id="systemStatus">
+
+                        فعال
+
+                    </strong>
+
+                </div>
+
+                <div class="status-item">
+
+                    <label>
+
+                        سلامتجویان در انتظار
+
+                    </label>
+
+                    <strong id="waitingHealthSeekersCount">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </section>
+
+            <!-- تاریخ و ساعت -->
+
+            <section class="header-clock">
+
+                <div>
+
+                    <span id="currentPersianDate">
+
+                        ----/--/--
+
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <span id="currentTime">
+
+                        --:--:--
+
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- اعلان‌ها -->
+
+            <section class="header-notification">
+
+                <button id="notificationButton"
+                        type="button">
+
+                    اعلان‌ها
+
+                </button>
+
+                <span id="notificationCounter">
+
+                    0
+
+                </span>
+
+            </section>
+
+            <!-- پروفایل کاربر -->
+
+            <section class="header-profile">
+
+                <img src="../../Shared/Assets/Images/avatar-default.png"
+                     alt="Profile">
+
+                <div>
+
+                    <strong id="loggedInUser">
+
+                        —
+
+                    </strong>
+
+                    <small id="loggedInRole">
+
+                        —
+
+                    </small>
+
+                </div>
+
+            </section>
+
+        </header>
+
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-018                   -->
+        <!-- آغاز محتوای اصلی ماژول                            -->
+        <!-- ================================================= -->
+
+        <section id="receptionWorkspace"
+                 class="reception-workspace">
+
+            <!-- ادامه در Part 1.5 -->
+
+```
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-019                   -->
+        <!-- فضای کاری اصلی پذیرش                             -->
+        <!-- ================================================= -->
+
+        <section id="receptionContent"
+                 class="reception-content">
+
+            <!-- ستون اصلی -->
+
+            <div class="content-column content-column-main">
+
+                <!-- شناسه سلامتجو -->
+
+                <section id="healthSeekerIdentityContainer"></section>
+
+                <!-- جستجوی سلامتجو -->
+
+                <section id="healthSeekerSearchContainer"></section>
+
+                <!-- اطلاعات سلامتجو -->
+
+                <section id="healthSeekerProfileContainer"></section>
+
+                <!-- اطلاعات جلسه سلامت -->
+
+                <section id="healthSessionContainer"></section>
+
+                <!-- ثبت پذیرش -->
+
+                <section id="receptionRegistrationContainer"></section>
+
+            </div>
+
+            <!-- ستون جانبی -->
+
+            <aside class="content-column content-column-side">
+
+                <!-- وضعیت سلامتجو -->
+
+                <section id="healthSeekerStatusContainer"></section>
+
+                <!-- صف انتظار -->
+
+                <section id="waitingQueueContainer"></section>
+
+                <!-- جلسات امروز -->
+
+                <section id="todaySessionsContainer"></section>
+
+                <!-- پزشک انتخاب شده -->
+
+                <section id="doctorInformationContainer"></section>
+
+                <!-- اتاق انتخاب شده -->
+
+                <section id="roomInformationContainer"></section>
+
+            </aside>
+
+        </section>
+
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-020                   -->
+        <!-- نوار عملیات سریع                                  -->
+        <!-- ================================================= -->
+
+        <section id="quickActionBar"
+                 class="quick-action-bar">
+
+            <button id="newReceptionButton"
+                    type="button">
+
+                پذیرش جدید
+
+            </button>
+
+            <button id="saveReceptionButton"
+                    type="button">
+
+                ذخیره
+
+            </button>
+
+            <button id="printReceptionButton"
+                    type="button">
+
+                چاپ رسید
+
+            </button>
+
+            <button id="cancelReceptionButton"
+                    type="button">
+
+                لغو
+
+            </button>
+
+        </section>
+
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-021                   -->
+        <!-- ناحیه نمایش پیام‌های ماژول                        -->
+        <!-- ================================================= -->
+
+        <section id="receptionMessageContainer"></section>
+
+        <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-022                   -->
+        <!-- پایان فضای کاری                                   -->
+        <!-- ================================================= -->
+
+        </section>
+
+     <!-- ادامه در Part 1.6 -->
+
+             <!-- ================================================= -->
+        <!-- SECTION ID : RECEPTION-HTML-023                   -->
+        <!-- قالب‌های آماده ماژول                              -->
+        <!-- ================================================= -->
+
+        <template id="healthSeekerCardTemplate"></template>
+
+        <template id="healthSessionTemplate"></template>
+
+        <template id="waitingQueueItemTemplate"></template>
+
+        <template id="notificationTemplate"></template>
+
+        <template id="modalTemplate"></template>
+
+        </section>
+
+    </div>
+
+</div>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-024                   -->
+<!-- فایل‌های JavaScript اشتراکی                        -->
+<!-- ================================================= -->
+
+<script defer
+        src="../../Shared/shared-storage.js"></script>
+
+<script defer
+        src="../../Shared/shared-validation.js"></script>
+
+<script defer
+        src="../../Shared/shared-events.js"></script>
+
+<script defer
+        src="../../Shared/shared-dialog.js"></script>
+
+<script defer
+        src="../../Shared/shared-loading.js"></script>
+
+<script defer
+        src="../../Shared/shared-toast.js"></script>
+
+<script defer
+        src="../../Shared/shared-helpers.js"></script>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-025                   -->
+<!-- راه‌اندازی ماژول پذیرش                            -->
+<!-- ================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        if (
+            typeof Reception !== "undefined" &&
+            typeof Reception.initialize === "function"
+        ) {
+
+            Reception.initialize();
+
+        }
+
+    }
+);
+
+</script>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-026                   -->
+<!-- کارت جستجوی سلامتجو                              -->
+<!-- ================================================= -->
+
+<section id="healthSeekerSearchCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            جستجوی سلامتجو
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="search-toolbar">
+
+            <input id="healthSeekerSearchInput"
+                   type="search"
+                   placeholder="شناسه سلامتجو، شماره پرونده، شماره همراه یا نام سلامتجو">
+
+            <button id="healthSeekerSearchButton"
+                    type="button">
+
+                جستجو
+
+            </button>
+
+            <button id="newHealthSeekerButton"
+                    type="button">
+
+                سلامتجوی جدید
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-027                   -->
+<!-- اطلاعات هویتی سلامتجو                             -->
+<!-- ================================================= -->
+
+<section id="healthSeekerIdentityCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            شناسه سلامتجو
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="identity-grid">
+
+            <div>
+
+                <label>
+
+                    شناسه سلامتجو
+
+                </label>
+
+                <strong id="healthSeekerId">
+
+                    SMM360-05-04-001
+
+                </strong>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    شناسه ویزیت
+
+                </label>
+
+                <strong id="visitId">
+
+                    SMM360-05-04-001-V01
+
+                </strong>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    شماره پرونده سلامت
+
+                </label>
+
+                <strong id="healthFileNumber">
+
+                    HSF-000001
+
+                </strong>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    وضعیت سلامتجو
+
+                </label>
+
+                <strong id="healthSeekerStatus">
+
+                    فعال
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-028                   -->
+<!-- خلاصه پرونده سلامت                                -->
+<!-- ================================================= -->
+
+<section id="healthSummaryCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            خلاصه پرونده سلامت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="summary-grid">
+
+            <div>
+
+                <label>
+
+                    نام و نام خانوادگی
+
+                </label>
+
+                <span id="healthSeekerFullName">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    تاریخ تولد
+
+                </label>
+
+                <span id="birthDate">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    جنسیت
+
+                </label>
+
+                <span id="gender">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    شماره همراه
+
+                </label>
+
+                <span id="mobileNumber">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    گروه خونی
+
+                </label>
+
+                <span id="bloodGroup">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    آخرین مراجعه
+
+                </label>
+
+                <span id="lastVisitDate">
+
+                    —
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    تعداد ویزیت‌ها
+
+                </label>
+
+                <span id="visitCount">
+
+                    0
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    پزشک آخرین مراجعه
+
+                </label>
+
+                <span id="lastDoctor">
+
+                    —
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-029                   -->
+<!-- عملیات سریع سلامتجو                               -->
+<!-- ================================================= -->
+
+<section id="healthSeekerActionsCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            عملیات
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="newVisitButton"
+                    type="button">
+
+                ثبت ویزیت جدید
+
+            </button>
+
+            <button id="viewHealthFileButton"
+                    type="button">
+
+                مشاهده پرونده سلامت
+
+            </button>
+
+            <button id="editHealthSeekerButton"
+                    type="button">
+
+                ویرایش اطلاعات
+
+            </button>
+
+            <button id="printIdentityButton"
+                    type="button">
+
+                چاپ اطلاعات
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-030                   -->
+<!-- پایان بخش جستجو و اطلاعات سلامتجو                 -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-031                   -->
+<!-- جلسه سلامت و ثبت پذیرش                            -->
+<!-- ================================================= -->
+
+<section id="healthSessionCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            ثبت جلسه سلامت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    شناسه جلسه سلامت
+
+                </label>
+
+                <input id="healthSessionId"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    شناسه ویزیت
+
+                </label>
+
+                <input id="visitIdentity"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    تاریخ مراجعه
+
+                </label>
+
+                <input id="visitDate"
+                       type="date">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    ساعت مراجعه
+
+                </label>
+
+                <input id="visitTime"
+                       type="time">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-032                   -->
+<!-- اطلاعات مراجعه                                    -->
+<!-- ================================================= -->
+
+<section id="visitInformationCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            اطلاعات مراجعه
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    پزشک
+
+                </label>
+
+                <select id="doctorId">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    کلینیک
+
+                </label>
+
+                <select id="clinicId">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    اتاق
+
+                </label>
+
+                <select id="roomId">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    نوع مراجعه
+
+                </label>
+
+                <select id="visitType">
+
+                    <option>اولین مراجعه</option>
+
+                    <option>ویزیت مجدد</option>
+
+                    <option>پیگیری درمان</option>
+
+                    <option>مشاوره</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group full-width">
+
+                <label>
+
+                    علت مراجعه سلامتجو
+
+                </label>
+
+                <textarea id="visitReason"
+                          rows="3"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-033                   -->
+<!-- وضعیت پذیرش                                       -->
+<!-- ================================================= -->
+
+<section id="receptionStatusCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            وضعیت پذیرش
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="status-grid">
+
+            <div>
+
+                <label>
+
+                    وضعیت پذیرش
+
+                </label>
+
+                <select id="receptionStatus">
+
+                    <option>در انتظار</option>
+
+                    <option>پذیرش شد</option>
+
+                    <option>در حال ویزیت</option>
+
+                    <option>پایان ویزیت</option>
+
+                    <option>لغو شد</option>
+
+                </select>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    اولویت مراجعه
+
+                </label>
+
+                <select id="visitPriority">
+
+                    <option>عادی</option>
+
+                    <option>فوری</option>
+
+                    <option>اورژانسی</option>
+
+                </select>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    شماره صف
+
+                </label>
+
+                <input id="queueNumber"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    زمان تقریبی انتظار
+
+                </label>
+
+                <input id="estimatedWaitingTime"
+                       type="text"
+                       readonly>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-034                   -->
+<!-- عملیات ثبت پذیرش                                  -->
+<!-- ================================================= -->
+
+<section id="receptionActionCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            عملیات پذیرش
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="saveReceptionButton"
+                    type="button">
+
+                ثبت پذیرش
+
+            </button>
+
+            <button id="temporarySaveButton"
+                    type="button">
+
+                ذخیره موقت
+
+            </button>
+
+            <button id="printReceptionReceiptButton"
+                    type="button">
+
+                چاپ رسید
+
+            </button>
+
+            <button id="cancelReceptionButton"
+                    type="button">
+
+                لغو پذیرش
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-035                   -->
+<!-- پایان بخش ثبت پذیرش                              -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-036                   -->
+<!-- صف سلامتجویان                                    -->
+<!-- ================================================= -->
+
+<section id="healthSeekerQueueCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            صف سلامتجویان
+
+        </h2>
+
+        <button id="refreshQueueButton"
+                type="button">
+
+            بروزرسانی
+
+        </button>
+
+    </header>
+
+    <div class="card-body">
+
+        <table id="healthSeekerQueueTable"
+               class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>صف</th>
+
+                    <th>شناسه سلامتجو</th>
+
+                    <th>شناسه ویزیت</th>
+
+                    <th>نام سلامتجو</th>
+
+                    <th>پزشک</th>
+
+                    <th>اولویت</th>
+
+                    <th>وضعیت</th>
+
+                    <th>انتظار</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="healthSeekerQueueBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-037                   -->
+<!-- وضعیت لحظه‌ای صف                                  -->
+<!-- ================================================= -->
+
+<section id="queueDashboardCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            وضعیت لحظه‌ای
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-item">
+
+                <label>
+
+                    سلامتجویان در انتظار
+
+                </label>
+
+                <strong id="waitingCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="dashboard-item">
+
+                <label>
+
+                    در حال پذیرش
+
+                </label>
+
+                <strong id="receptionCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="dashboard-item">
+
+                <label>
+
+                    در حال ویزیت
+
+                </label>
+
+                <strong id="visitingCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="dashboard-item">
+
+                <label>
+
+                    پایان یافته
+
+                </label>
+
+                <strong id="completedCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-038                   -->
+<!-- اولویت سلامتجویان                                 -->
+<!-- ================================================= -->
+
+<section id="priorityQueueCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            اولویت مراجعه
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>اولویت</th>
+
+                    <th>تعداد</th>
+
+                    <th>میانگین انتظار</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>اورژانسی</td>
+
+                    <td id="emergencyCount">0</td>
+
+                    <td id="emergencyWaiting">--</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>فوری</td>
+
+                    <td id="urgentCount">0</td>
+
+                    <td id="urgentWaiting">--</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>عادی</td>
+
+                    <td id="normalCount">0</td>
+
+                    <td id="normalWaiting">--</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-039                   -->
+<!-- عملیات صف                                         -->
+<!-- ================================================= -->
+
+<section id="queueActionsCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            عملیات صف
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="callNextButton"
+                    type="button">
+
+                فراخوانی نفر بعد
+
+            </button>
+
+            <button id="repeatCallButton"
+                    type="button">
+
+                تکرار فراخوانی
+
+            </button>
+
+            <button id="skipQueueButton"
+                    type="button">
+
+                رد موقت
+
+            </button>
+
+            <button id="finishVisitButton"
+                    type="button">
+
+                پایان ویزیت
+
+            </button>
+
+            <button id="refreshDashboardButton"
+                    type="button">
+
+                بروزرسانی وضعیت
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-040                   -->
+<!-- پایان بخش صف سلامتجویان                           -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-041                   -->
+<!-- مدیریت نوبت‌ها                                    -->
+<!-- ================================================= -->
+
+<section id="appointmentManagementCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            مدیریت نوبت‌ها
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table id="appointmentTable"
+               class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>نوبت</th>
+                    <th>شناسه سلامتجو</th>
+                    <th>نام سلامتجو</th>
+                    <th>پزشک</th>
+                    <th>زمان</th>
+                    <th>وضعیت</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="appointmentTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-042                   -->
+<!-- انتخاب پزشک                                       -->
+<!-- ================================================= -->
+
+<section id="doctorAssignmentCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            تخصیص پزشک
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    پزشک
+
+                </label>
+
+                <select id="doctorSelect">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    تخصص
+
+                </label>
+
+                <input id="doctorSpeciality"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    وضعیت پزشک
+
+                </label>
+
+                <input id="doctorStatus"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    سلامتجویان در انتظار
+
+                </label>
+
+                <input id="doctorQueueCount"
+                       type="text"
+                       readonly>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-043                   -->
+<!-- انتخاب بخش درمان                                  -->
+<!-- ================================================= -->
+
+<section id="departmentAssignmentCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            بخش درمان
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    بخش
+
+                </label>
+
+                <select id="departmentSelect">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    ظرفیت فعال
+
+                </label>
+
+                <input id="departmentCapacity"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    وضعیت
+
+                </label>
+
+                <input id="departmentStatus"
+                       type="text"
+                       readonly>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-044                   -->
+<!-- انتخاب اتاق                                       -->
+<!-- ================================================= -->
+
+<section id="roomAssignmentCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            تخصیص اتاق
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    اتاق
+
+                </label>
+
+                <select id="roomSelect">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    وضعیت اتاق
+
+                </label>
+
+                <input id="roomStatus"
+                       type="text"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    ظرفیت
+
+                </label>
+
+                <input id="roomCapacity"
+                       type="text"
+                       readonly>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-045                   -->
+<!-- تخصیص منابع                                       -->
+<!-- ================================================= -->
+
+<section id="resourceAssignmentCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            تخصیص منابع
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table id="resourceTable"
+               class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>منبع</th>
+                    <th>شناسه</th>
+                    <th>وضعیت</th>
+                    <th>تخصیص</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="resourceTableBody">
+
+            </tbody>
+
+        </table>
+
+        <div class="action-group">
+
+            <button id="assignResourceButton"
+                    type="button">
+
+                تخصیص
+
+            </button>
+
+            <button id="releaseResourceButton"
+                    type="button">
+
+                آزادسازی
+
+            </button>
+
+            <button id="refreshResourcesButton"
+                    type="button">
+
+                بروزرسانی
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-046                   -->
+<!-- پایان بخش مدیریت نوبت‌ها و منابع                  -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-047                   -->
+<!-- اطلاعات پوشش خدمات سلامت                          -->
+<!-- ================================================= -->
+
+<section id="coverageCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            پوشش خدمات سلامت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    نوع پوشش
+
+                </label>
+
+                <select id="coverageType">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    ارائه‌دهنده خدمت
+
+                </label>
+
+                <select id="coverageProvider">
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    شماره عضویت
+
+                </label>
+
+                <input id="coverageMemberNumber"
+                       type="text">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    اعتبار
+
+                </label>
+
+                <input id="coverageExpireDate"
+                       type="date">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-048                   -->
+<!-- اطلاعات مالی مراجعه                               -->
+<!-- ================================================= -->
+
+<section id="financialCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            اطلاعات مالی
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>شرح</th>
+                    <th>مبلغ</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>هزینه ویزیت</td>
+
+                    <td id="visitCost">
+
+                        0
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>تخفیف</td>
+
+                    <td id="discountAmount">
+
+                        0
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>سهم پوشش خدمات</td>
+
+                    <td id="coverageAmount">
+
+                        0
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        مبلغ قابل پرداخت
+
+                    </td>
+
+                    <td id="finalAmount">
+
+                        0
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-049                   -->
+<!-- ثبت پرداخت                                        -->
+<!-- ================================================= -->
+
+<section id="paymentCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            ثبت پرداخت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+
+                    روش پرداخت
+
+                </label>
+
+                <select id="paymentMethod">
+
+                    <option>نقدی</option>
+
+                    <option>کارت بانکی</option>
+
+                    <option>انتقال بانکی</option>
+
+                    <option>کیف پول</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    مبلغ پرداخت
+
+                </label>
+
+                <input id="paymentAmount"
+                       type="number">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    شماره مرجع
+
+                </label>
+
+                <input id="paymentReference"
+                       type="text">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    وضعیت پرداخت
+
+                </label>
+
+                <input id="paymentStatus"
+                       type="text"
+                       readonly>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-050                   -->
+<!-- صورتحساب                                          -->
+<!-- ================================================= -->
+
+<section id="invoiceCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            صورتحساب
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table id="invoiceTable"
+               class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>خدمت</th>
+                    <th>تعداد</th>
+                    <th>مبلغ</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="invoiceTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-051                   -->
+<!-- رسید و عملیات مالی                                -->
+<!-- ================================================= -->
+
+<section id="receiptCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            رسید پرداخت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="calculateInvoiceButton"
+                    type="button">
+
+                محاسبه هزینه
+
+            </button>
+
+            <button id="confirmPaymentButton"
+                    type="button">
+
+                تأیید پرداخت
+
+            </button>
+
+            <button id="printReceiptButton"
+                    type="button">
+
+                چاپ رسید
+
+            </button>
+
+            <button id="sendReceiptButton"
+                    type="button">
+
+                ارسال رسید
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-052                   -->
+<!-- پایان بخش مالی                                    -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-053                   -->
+<!-- خلاصه پرونده سلامت                               -->
+<!-- ================================================= -->
+
+<section id="healthRecordCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            پرونده سلامت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="summary-grid">
+
+            <div>
+
+                <label>شناسه سلامتجو</label>
+
+                <strong id="recordHealthSeekerId"></strong>
+
+            </div>
+
+            <div>
+
+                <label>تعداد ویزیت‌ها</label>
+
+                <strong id="recordVisitCount"></strong>
+
+            </div>
+
+            <div>
+
+                <label>آخرین مراجعه</label>
+
+                <strong id="recordLastVisit"></strong>
+
+            </div>
+
+            <div>
+
+                <label>پزشک آخرین مراجعه</label>
+
+                <strong id="recordLastDoctor"></strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-054                   -->
+<!-- سوابق سلامت                                       -->
+<!-- ================================================= -->
+
+<section id="healthHistoryCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            سوابق سلامت
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>تاریخ</th>
+
+                    <th>پزشک</th>
+
+                    <th>شرح</th>
+
+                    <th>وضعیت</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="healthHistoryTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-055                   -->
+<!-- تاریخچه مراجعات                                   -->
+<!-- ================================================= -->
+
+<section id="visitHistoryCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            تاریخچه مراجعات
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>شناسه ویزیت</th>
+
+                    <th>تاریخ</th>
+
+                    <th>نوع مراجعه</th>
+
+                    <th>پزشک</th>
+
+                    <th>نتیجه</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="visitHistoryTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-056                   -->
+<!-- مدارک و پیوست‌ها                                  -->
+<!-- ================================================= -->
+
+<section id="attachmentsCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            مدارک و پیوست‌ها
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="uploadAttachmentButton"
+                    type="button">
+
+                افزودن مدرک
+
+            </button>
+
+            <button id="scanAttachmentButton"
+                    type="button">
+
+                اسکن مدرک
+
+            </button>
+
+            <button id="downloadAttachmentButton"
+                    type="button">
+
+                دریافت
+
+            </button>
+
+        </div>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>نوع</th>
+
+                    <th>نام فایل</th>
+
+                    <th>تاریخ</th>
+
+                    <th>عملیات</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="attachmentTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-057                   -->
+<!-- اقدامات پرونده سلامت                             -->
+<!-- ================================================= -->
+
+<section id="recordActionCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            عملیات پرونده
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="openHealthRecordButton"
+                    type="button">
+
+                مشاهده پرونده
+
+            </button>
+
+            <button id="printHealthRecordButton"
+                    type="button">
+
+                چاپ پرونده
+
+            </button>
+
+            <button id="exportHealthRecordButton"
+                    type="button">
+
+                خروجی
+
+            </button>
+
+            <button id="refreshHealthRecordButton"
+                    type="button">
+
+                بروزرسانی
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-058                   -->
+<!-- پایان بخش پرونده سلامت                           -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-059                   -->
+<!-- پنل فعالیت‌های لحظه‌ای                             -->
+<!-- ================================================= -->
+
+<section id="activityPanelCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            فعالیت‌های لحظه‌ای
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <ul id="activityTimeline"
+            class="activity-list">
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-060                   -->
+<!-- خط زمانی سلامتجو                                  -->
+<!-- ================================================= -->
+
+<section id="timelineCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            خط زمانی سلامتجو
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div id="healthTimeline"
+             class="timeline">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-061                   -->
+<!-- مرکز اعلان‌ها                                     -->
+<!-- ================================================= -->
+
+<section id="notificationCenterCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            اعلان‌ها
+
+        </h2>
+
+        <button id="clearNotificationsButton"
+                type="button">
+
+            پاکسازی
+
+        </button>
+
+    </header>
+
+    <div class="card-body">
+
+        <ul id="notificationList"
+            class="notification-list">
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-062                   -->
+<!-- هشدارهای سامانه                                   -->
+<!-- ================================================= -->
+
+<section id="alertCenterCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            هشدارها
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div id="alertContainer"
+             class="alert-container">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-063                   -->
+<!-- خلاصه وضعیت سامانه                                -->
+<!-- ================================================= -->
+
+<section id="systemOverviewCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            وضعیت سامانه
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="overview-grid">
+
+            <div class="overview-item">
+
+                <label>
+
+                    کاربران آنلاین
+
+                </label>
+
+                <strong id="onlineUsersCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="overview-item">
+
+                <label>
+
+                    پزشکان فعال
+
+                </label>
+
+                <strong id="activeDoctorsCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="overview-item">
+
+                <label>
+
+                    اتاق‌های فعال
+
+                </label>
+
+                <strong id="activeRoomsCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+            <div class="overview-item">
+
+                <label>
+
+                    جلسات امروز
+
+                </label>
+
+                <strong id="todayHealthSessionsCount">
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-064                   -->
+<!-- میانبرهای سریع                                    -->
+<!-- ================================================= -->
+
+<section id="quickToolsCard"
+         class="card">
+
+    <header class="card-header">
+
+        <h2>
+
+            ابزارهای سریع
+
+        </h2>
+
+    </header>
+
+    <div class="card-body">
+
+        <div class="action-group">
+
+            <button id="refreshReceptionModuleButton"
+                    type="button">
+
+                بروزرسانی صفحه
+
+            </button>
+
+            <button id="refreshQueuesButton"
+                    type="button">
+
+                بروزرسانی صف
+
+            </button>
+
+            <button id="refreshDashboardButton"
+                    type="button">
+
+                بروزرسانی داشبورد
+
+            </button>
+
+            <button id="refreshNotificationsButton"
+                    type="button">
+
+                بروزرسانی اعلان‌ها
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-065                   -->
+<!-- پایان پنل‌های جانبی                               -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-066                   -->
+<!-- پنجره‌های محاوره‌ای                               -->
+<!-- ================================================= -->
+
+<dialog id="confirmationDialog">
+
+    <header>
+
+        <h2>
+
+            تأیید عملیات
+
+        </h2>
+
+    </header>
+
+    <section id="confirmationDialogBody">
+
+    </section>
+
+    <footer>
+
+        <button id="confirmDialogButton"
+                type="button">
+
+            تأیید
+
+        </button>
+
+        <button id="cancelDialogButton"
+                type="button">
+
+            انصراف
+
+        </button>
+
+    </footer>
+
+</dialog>
+
+<dialog id="informationDialog">
+
+    <header>
+
+        <h2>
+
+            اطلاعات
+
+        </h2>
+
+    </header>
+
+    <section id="informationDialogBody">
+
+    </section>
+
+    <footer>
+
+        <button id="closeInformationDialogButton"
+                type="button">
+
+            بستن
+
+        </button>
+
+    </footer>
+
+</dialog>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-067                   -->
+<!-- پنجره‌های Modal                                   -->
+<!-- ================================================= -->
+
+<div id="modalOverlay"
+     class="modal-overlay">
+
+    <div id="modalContainer"
+         class="modal-container">
+
+    </div>
+
+</div>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-068                   -->
+<!-- Drawer های جانبی                                  -->
+<!-- ================================================= -->
+
+<aside id="leftDrawer"
+       class="drawer">
+
+</aside>
+
+<aside id="rightDrawer"
+       class="drawer">
+
+</aside>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-069                   -->
+<!-- منوی کلیک راست                                    -->
+<!-- ================================================= -->
+
+<nav id="contextMenu"
+     class="context-menu">
+
+    <ul>
+
+        <li id="contextOpenHealthRecord">
+
+            مشاهده پرونده سلامت
+
+        </li>
+
+        <li id="contextNewVisit">
+
+            ثبت ویزیت جدید
+
+        </li>
+
+        <li id="contextPrintReceipt">
+
+            چاپ رسید
+
+        </li>
+
+        <li id="contextRefresh">
+
+            بروزرسانی
+
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-070                   -->
+<!-- Template های HTML                                 -->
+<!-- ================================================= -->
+
+<template id="healthSeekerTemplate">
+
+</template>
+
+<template id="visitTemplate">
+
+</template>
+
+<template id="queueTemplate">
+
+</template>
+
+<template id="doctorTemplate">
+
+</template>
+
+<template id="roomTemplate">
+
+</template>
+
+<template id="notificationTemplate">
+
+</template>
+
+<template id="activityTemplate">
+
+</template>
+
+<template id="timelineTemplate">
+
+</template>
+
+<template id="attachmentTemplate">
+
+</template>
+
+<template id="invoiceTemplate">
+
+</template>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-071                   -->
+<!-- Container های پویا                                -->
+<!-- ================================================= -->
+
+<div id="dynamicComponentContainer"></div>
+
+<div id="floatingPanelContainer"></div>
+
+<div id="temporaryViewContainer"></div>
+
+<div id="printContainer"></div>
+
+<div id="exportContainer"></div>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-072                   -->
+<!-- پایان Dialog و Template ها                        -->
+<!-- ================================================= -->
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-073                   -->
+<!-- Footer ماژول                                      -->
+<!-- ================================================= -->
+
+<footer id="receptionFooter"
+        class="module-footer">
+
+    <section class="footer-left">
+
+        <span>
+
+            SMM360 VIP Care
+
+        </span>
+
+        <span>
+
+            Reception Module
+
+        </span>
+
+    </section>
+
+    <section class="footer-center">
+
+        <span id="footerSystemStatus">
+
+            سامانه آماده سرویس‌دهی
+
+        </span>
+
+    </section>
+
+    <section class="footer-right">
+
+        <span>
+
+            Enterprise Edition
+
+        </span>
+
+        <span>
+
+            Version 0.0.1
+
+        </span>
+
+    </section>
+
+</footer>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-074                   -->
+<!-- Template های عمومی HTML                           -->
+<!-- ================================================= -->
+
+<template id="tableRowTemplate"></template>
+
+<template id="cardTemplate"></template>
+
+<template id="listItemTemplate"></template>
+
+<template id="emptyStateTemplate"></template>
+
+<template id="loadingTemplate"></template>
+
+<template id="errorTemplate"></template>
+
+<template id="successTemplate"></template>
+
+<template id="searchResultTemplate"></template>
+
+<template id="queueRowTemplate"></template>
+
+<template id="doctorRowTemplate"></template>
+
+<template id="roomRowTemplate"></template>
+
+<template id="receiptTemplate"></template>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-075                   -->
+<!-- فایل‌های JavaScript اختصاصی ماژول                 -->
+<!-- ================================================= -->
+
+<script defer
+        src="./reception.config.js"></script>
+
+<script defer
+        src="./reception.state.js"></script>
+
+<script defer
+        src="./reception.api.js"></script>
+
+<script defer
+        src="./reception.search.js"></script>
+
+<script defer
+        src="./reception.queue.js"></script>
+
+<script defer
+        src="./reception.appointment.js"></script>
+
+<script defer
+        src="./reception.financial.js"></script>
+
+<script defer
+        src="./reception.record.js"></script>
+
+<script defer
+        src="./reception.notification.js"></script>
+
+<script defer
+        src="./reception.ui.js"></script>
+
+<script defer
+        src="./reception.events.js"></script>
+
+<script defer
+        src="./reception.initialize.js"></script>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-076                   -->
+<!-- راه‌اندازی ماژول                                  -->
+<!-- ================================================= -->
+
+<script>
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    function () {
+
+        if (
+
+            window.Reception &&
+            typeof window.Reception.initialize === "function"
+
+        ) {
+
+            window.Reception.initialize();
+
+        }
+
+    }
+
+);
+
+</script>
+
+<!-- ================================================= -->
+<!-- SECTION ID : RECEPTION-HTML-999                   -->
+<!-- END VERSION : 0.0.1                               -->
+<!-- پایان ماژول                                       -->
+<!-- ================================================= -->
+
+</body>
+
+</html>

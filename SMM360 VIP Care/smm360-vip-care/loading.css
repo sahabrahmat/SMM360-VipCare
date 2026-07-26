@@ -1,0 +1,197 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : loading.css
+   MODULE      : Shared
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   استایل صفحه بارگذاری سراسری سیستم
+
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-001               */
+/* صفحه اصلی بارگذاری                               */
+/* ================================================= */
+
+.loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F5F7FA;
+
+    z-index:99999;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-002               */
+/* لوگو                                              */
+/* ================================================= */
+
+.loading-logo img{
+
+    width:120px;
+
+    height:auto;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-003               */
+/* چرخش بارگذاری                                     */
+/* ================================================= */
+
+.loading-spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid #E5E7EB;
+
+    border-top:6px solid #0B3A53;
+
+    border-radius:50%;
+
+    animation:loadingRotate 1s linear infinite;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-004               */
+/* عنوان                                             */
+/* ================================================= */
+
+.loading-screen h1{
+
+    margin:10px 0;
+
+    font-size:28px;
+
+    color:#0B3A53;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-005               */
+/* متن وضعیت                                         */
+/* ================================================= */
+
+.loading-screen p{
+
+    margin-bottom:25px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-006               */
+/* نوار پیشرفت                                       */
+/* ================================================= */
+
+.loading-progress{
+
+    width:340px;
+
+    height:10px;
+
+    background:#E5E7EB;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-007               */
+/* مقدار پیشرفت                                      */
+/* ================================================= */
+
+.loading-progress-bar{
+
+    width:0;
+
+    height:100%;
+
+    background:#D4AF37;
+
+    transition:.2s;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-008               */
+/* درصد                                              */
+/* ================================================= */
+
+#loadingPercent{
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+    color:#0B3A53;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-009               */
+/* انیمیشن                                            */
+/* ================================================= */
+
+@keyframes loadingRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-LOADING-CSS-999               */
+/* END VERSION : 0.0.1                               */
+/* پایان ماژول                                       */
+/* ================================================= */

@@ -1,0 +1,1029 @@
+<!-- ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : dashboard.html
+   MODULE      : Dashboard
+   VERSION     : 0.0.1
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   داشبورد اصلی مدیریت سیستم
+
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-001                        -->
+<!-- DOCUMENT HEAD                                     -->
+<!-- اطلاعات اولیه صفحه                                -->
+<!-- ================================================= -->
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="SMM360 VIP Care Enterprise Dashboard">
+
+<meta name="author" content="Dr. Seyed Mehdi Mohammadi">
+
+<meta name="version" content="0.0.1">
+
+<title>SMM360 VIP Care | Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-wrapper">
+
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-002                        -->
+<!-- HEADER                                            -->
+<!-- سربرگ اصلی سیستم                                  -->
+<!-- ================================================= -->
+
+<header class="dashboard-header">
+
+<div class="header-left">
+
+<img
+src="../smm360-vip-care/assets/images/logo.png"
+class="header-logo"
+alt="SMM360 VIP Care">
+
+<div>
+
+<h2>
+
+SMM360 VIP Care
+
+</h2>
+
+<span>
+
+Medical Intelligence Platform
+
+</span>
+
+</div>
+
+</div>
+
+
+<div class="header-center">
+
+<div class="dashboard-clock">
+
+<div id="dashboardTime">
+
+00:00:00
+
+</div>
+
+<div id="dashboardDate">
+
+1405/01/01
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="header-right">
+
+<div class="notification-btn">
+
+🔔
+
+<span class="notify-count">
+
+0
+
+</span>
+
+</div>
+
+
+<div class="user-box">
+
+<img
+src="../smm360-vip-care/assets/images/founder.jpg"
+class="user-avatar"
+alt="Founder">
+
+<div>
+
+<strong>
+
+دکتر سید مهدی محمدی
+
+</strong>
+
+<span>
+
+مدیر سیستم
+
+</span>
+
+</div>
+
+</div>
+
+<button class="logout-btn">
+
+خروج
+
+</button>
+
+</div>
+
+</header>
+
+
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-003                        -->
+<!-- MAIN                                              -->
+<!-- محتوای اصلی داشبورد                               -->
+<!-- ================================================= -->
+
+<main class="dashboard-main">
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-004                        -->
+<!-- KPI SECTION                                       -->
+<!-- شاخص‌های کلیدی سیستم                              -->
+<!-- ================================================= -->
+
+<section class="kpi-container">
+
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">👥</div>
+    
+    <div class="kpi-info">
+    
+    <h4>سلامتجویان فعال</h4>
+    
+    <h2 id="patientCounter">0</h2>
+    
+    <span>Patient Records</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">💰</div>
+    
+    <div class="kpi-info">
+    
+    <h4>درآمد امروز</h4>
+    
+    <h2 id="todayIncome">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">🏦</div>
+    
+    <div class="kpi-info">
+    
+    <h4>موجودی صندوق</h4>
+    
+    <h2 id="cashBalance">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">📅</div>
+    
+    <div class="kpi-info">
+    
+    <h4>مراجعات امروز</h4>
+    
+    <h2 id="todayVisit">0</h2>
+    
+    <span>جلسه</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">📊</div>
+    
+    <div class="kpi-info">
+    
+    <h4>درصد موفقیت درمان</h4>
+    
+    <h2 id="recoveryRate">0%</h2>
+    
+    <span>Recovery</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div class="kpi-card">
+    
+    <div class="kpi-icon">🤖</div>
+    
+    <div class="kpi-info">
+    
+    <h4>AI Engine</h4>
+    
+    <h2 class="online">ONLINE</h2>
+    
+    <span>Medical Intelligence</span>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-005                        -->
+    <!-- FINANCIAL SUMMARY                                 -->
+    <!-- خلاصه مالی مرکز                                   -->
+    <!-- ================================================= -->
+    
+    <section class="finance-summary">
+    
+    <div class="finance-card">
+    
+    <h4>درآمد این هفته</h4>
+    
+    <h2 id="weekIncome">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    
+    <div class="finance-card">
+    
+    <h4>درآمد این ماه</h4>
+    
+    <h2 id="monthIncome">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    
+    <div class="finance-card">
+    
+    <h4>بدهکاران</h4>
+    
+    <h2 id="debtorsCount">0</h2>
+    
+    <span>پرونده</span>
+    
+    </div>
+    
+    
+    <div class="finance-card">
+    
+    <h4>بیمه‌های در انتظار</h4>
+    
+    <h2 id="insurancePending">0</h2>
+    
+    <span>پرونده</span>
+    
+    </div>
+    
+    
+    <div class="finance-card">
+    
+    <h4>پرداخت‌های امروز</h4>
+    
+    <h2 id="todayPayments">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    
+    <div class="finance-card">
+    
+    <h4>هزینه‌های امروز</h4>
+    
+    <h2 id="todayExpenses">0</h2>
+    
+    <span>تومان</span>
+    
+    </div>
+    
+    </section>
+    
+    
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-006                        -->
+<!-- REAL TIME OPERATION CENTER                        -->
+<!-- مرکز کنترل و مانیتورینگ لحظه‌ای                  -->
+<!-- ================================================= -->
+
+<section class="operation-center">
+
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-007                        -->
+    <!-- TREATMENT ROOMS PANEL                             -->
+    <!-- وضعیت اتاق‌های درمان                              -->
+    <!-- ================================================ -->
+    
+    <div class="rooms-panel">
+    
+    <div class="panel-title">
+    
+    <h2>
+    
+    وضعیت لحظه‌ای اتاق‌های درمان
+    
+    </h2>
+    
+    <span>
+    
+    Real Time Monitoring
+    
+    </span>
+    
+    </div>
+    
+    <div class="room-grid">
+    
+    <div class="room-card available">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۱</h3>
+    
+    <span>🟢 آماده پذیرش</span>
+    
+    </div>
+    
+    <p>تخت خالی</p>
+    
+    </div>
+    
+    
+    <div class="room-card busy">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۲</h3>
+    
+    <span>🟡 پزشک داخل اتاق</span>
+    
+    </div>
+    
+    <p>سلامتجو در حال ویزیت</p>
+    
+    </div>
+    
+    
+    <div class="room-card emergency">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۳</h3>
+    
+    <span>🔴 اورژانس</span>
+    
+    </div>
+    
+    <p>نیاز به حضور دستیار</p>
+    
+    </div>
+    
+    
+    <div class="room-card occupied">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۴</h3>
+    
+    <span>🟣 درمان با دستگاه</span>
+    
+    </div>
+    
+    <p>پروتکل هوشمند فعال</p>
+    
+    </div>
+    
+    
+    <div class="room-card cleaning">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۵</h3>
+    
+    <span>🔵 ضدعفونی</span>
+    
+    </div>
+    
+    <p>آماده‌سازی برای سلامتجوی بعدی</p>
+    
+    </div>
+    
+    
+    <div class="room-card waiting">
+    
+    <div class="room-header">
+    
+    <h3>اتاق درمان ۶</h3>
+    
+    <span>🟠 انتظار ورود سلامتجو</span>
+    
+    </div>
+    
+    <p>۳ دقیقه تا ورود</p>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-008                        -->
+    <!-- TODAY WAITING QUEUE                               -->
+    <!-- صف انتظار امروز                                   -->
+    <!-- ================================================ -->
+    
+    <div class="waiting-panel">
+    
+    <div class="panel-title">
+    
+    <h2>
+    
+    صف انتظار امروز
+    
+    </h2>
+    
+    <span>
+    
+    Today's Queue
+    
+    </span>
+    
+    </div>
+    
+    <table class="waiting-table">
+    
+    <thead>
+    
+    <tr>
+    
+    <th>کد</th>
+    
+    <th>سلامتجو</th>
+    
+    <th>مرحله</th>
+    
+    <th>زمان</th>
+    
+    </tr>
+    
+    </thead>
+    
+    <tbody>
+    
+    <tr>
+    
+    <td>001</td>
+    
+    <td>-----</td>
+    
+    <td>پذیرش</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>002</td>
+    
+    <td>-----</td>
+    
+    <td>اتاق دستیار</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>003</td>
+    
+    <td>-----</td>
+    
+    <td>در انتظار پزشک</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>004</td>
+    
+    <td>-----</td>
+    
+    <td>اتاق درمان</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>005</td>
+    
+    <td>-----</td>
+    
+    <td>داروخانه</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>006</td>
+    
+    <td>-----</td>
+    
+    <td>تسویه حساب</td>
+    
+    <td>00:00</td>
+    
+    </tr>
+    
+    </tbody>
+    
+    </table>
+    
+    </div>
+    
+    </section>
+    
+    
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-009                        -->
+<!-- MEDICAL INTELLIGENCE ANALYTICS CENTER             -->
+<!-- مرکز تحلیل هوشمند پزشکی                          -->
+<!-- ================================================= -->
+
+<section class="analytics-center">
+
+    <div class="analytics-left">
+    
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-010                        -->
+    <!-- INCOME CHART                                      -->
+    <!-- نمودار درآمد                                      -->
+    <!-- ================================================ -->
+    
+    <div class="chart-card">
+    
+    <h3>
+    
+    📈 روند درآمد مرکز
+    
+    </h3>
+    
+    <canvas id="incomeChart"></canvas>
+    
+    </div>
+    
+    
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-011                        -->
+    <!-- PATIENT CHART                                     -->
+    <!-- نمودار مراجعات                                    -->
+    <!-- ================================================ -->
+    
+    <div class="chart-card">
+    
+    <h3>
+    
+    📊 مراجعات روزانه
+    
+    </h3>
+    
+    <canvas id="patientChart"></canvas>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <div class="analytics-right">
+    
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-012                        -->
+    <!-- AI SUMMARY                                        -->
+    <!-- خلاصه تحلیل هوشمند                                -->
+    <!-- ================================================ -->
+    
+    <div class="ai-summary">
+    
+    <h2>
+    
+    🤖 خلاصه هوشمند امروز
+    
+    </h2>
+    
+    <ul>
+    
+    <li>۳ سلامتجو نیازمند بازبینی پروتکل درمان هستند.</li>
+    
+    <li>۲ سلامتجو روند بهبود بیش از ۳۰٪ داشته‌اند.</li>
+    
+    <li>۱ سلامتجو در وضعیت هشدار قرار دارد.</li>
+    
+    <li>میانگین کیفیت خواب سلامتجویان ۱۲٪ بهتر شده است.</li>
+    
+    <li>درآمد امروز نسبت به دیروز ۸٪ افزایش داشته است.</li>
+    
+    </ul>
+    
+    </div>
+    
+    
+    <!-- ================================================ -->
+    <!-- SECTION ID : DASHBOARD-013                        -->
+    <!-- RISK BOARD                                        -->
+    <!-- سلامتجویان پرریسک                                 -->
+    <!-- ================================================ -->
+    
+    <div class="risk-board">
+    
+    <h2>
+    
+    ⚠ سلامتجویان پرریسک
+    
+    </h2>
+    
+    <table>
+    
+    <thead>
+    
+    <tr>
+    
+    <th>سلامتجو</th>
+    
+    <th>Risk</th>
+    
+    <th>وضعیت</th>
+    
+    </tr>
+    
+    </thead>
+    
+    <tbody>
+    
+    <tr>
+    
+    <td>-----</td>
+    
+    <td>82%</td>
+    
+    <td>نیازمند بررسی</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>-----</td>
+    
+    <td>74%</td>
+    
+    <td>تغییر پروتکل</td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>-----</td>
+    
+    <td>68%</td>
+    
+    <td>کنترل مجدد</td>
+    
+    </tr>
+    
+    </tbody>
+    
+    </table>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-014                        -->
+    <!-- QUICK ACCESS                                      -->
+    <!-- دسترسی سریع                                       -->
+    <!-- ================================================= -->
+    
+    <section class="quick-access">
+    
+    <div class="section-title">
+    
+    <h2>
+    
+    دسترسی سریع
+    
+    </h2>
+    
+    <span>
+    
+    Enterprise Modules
+    
+    </span>
+    
+    </div>
+    
+    <div class="quick-grid">
+    
+    <a href="../reception/reception.html" class="quick-card">
+    
+    <div class="quick-icon">📝</div>
+    
+    <h3>پذیرش</h3>
+    
+    <p>ثبت سلامتجو، نوبت و صندوق</p>
+    
+    </a>
+    
+    
+    <a href="../assistant/assistant.html" class="quick-card">
+    
+    <div class="quick-icon">🩺</div>
+    
+    <h3>اتاق دستیار</h3>
+    
+    <p>ثبت اطلاعات اولیه</p>
+    
+    </a>
+    
+    
+    <a href="../doctor/doctor.html" class="quick-card">
+    
+    <div class="quick-icon">👨‍⚕️</div>
+    
+    <h3>اتاق پزشک</h3>
+    
+    <p>پرونده و تصمیم درمان</p>
+    
+    </a>
+    
+    
+    <a href="../roshanak/roshanak.html" class="quick-card">
+    
+    <div class="quick-icon">💡</div>
+    
+    <h3>روشنک</h3>
+    
+    <p>اسکن و درمان هوشمند</p>
+    
+    </a>
+    
+    
+    <a href="../pharmacy/pharmacy.html" class="quick-card">
+    
+    <div class="quick-icon">💊</div>
+    
+    <h3>داروخانه</h3>
+    
+    <p>نسخه و تحویل دارو</p>
+    
+    </a>
+    
+    
+    <a href="../finance/finance.html" class="quick-card">
+    
+    <div class="quick-icon">💰</div>
+    
+    <h3>مالی</h3>
+    
+    <p>درآمد، هزینه و بیمه</p>
+    
+    </a>
+    
+    
+    <a href="../informatics/informatics.html" class="quick-card">
+    
+    <div class="quick-icon">💻</div>
+    
+    <h3>انفورماتیک</h3>
+    
+    <p>مدیریت کاربران و سیستم</p>
+    
+    </a>
+    
+    
+    <a href="../warehouse/warehouse.html" class="quick-card">
+    
+    <div class="quick-icon">📦</div>
+    
+    <h3>انبار</h3>
+    
+    <p>تجهیزات و موجودی</p>
+    
+    </a>
+    
+    
+    <a href="../students/students.html" class="quick-card">
+    
+    <div class="quick-icon">🎓</div>
+    
+    <h3>دانشجویان</h3>
+    
+    <p>کارآموزان و آموزش</p>
+    
+    </a>
+    
+    
+    <a href="../devices/devices.html" class="quick-card">
+    
+    <div class="quick-icon">🖥️</div>
+    
+    <h3>تجهیزات</h3>
+    
+    <p>دستگاه‌های درمانی</p>
+    
+    </a>
+    
+    
+    <a href="../communications/communications.html" class="quick-card">
+    
+    <div class="quick-icon">📡</div>
+    
+    <h3>ارتباطات</h3>
+    
+    <p>پیام‌ها و اعلان‌ها</p>
+    
+    </a>
+    
+    
+    <a href="../ai/ai.html" class="quick-card">
+    
+    <div class="quick-icon">🤖</div>
+    
+    <h3>هوش مصنوعی</h3>
+    
+    <p>موتور تحلیل SMM360</p>
+    
+    </a>
+    
+    </div>
+    
+    </section>
+
+<!-- ================================================= -->
+<!-- SECTION ID : DASHBOARD-015                        -->
+<!-- FOOTER                                            -->
+<!-- پابرگ سیستم                                       -->
+<!-- ================================================= -->
+
+<footer class="dashboard-footer">
+
+    <div class="footer-left">
+    
+    <span>
+    
+    SMM360 VIP Care Enterprise Edition
+    
+    </span>
+    
+    </div>
+    
+    <div class="footer-center">
+    
+    <span>
+    
+    Version 0.0.1
+    
+    </span>
+    
+    </div>
+    
+    <div class="footer-right">
+    
+    <span>
+    
+    © SMM360 VIP CARE
+    
+    </span>
+    
+    </div>
+    
+    </footer>
+    
+    
+    
+    </main>
+    
+    </div>
+    
+    
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-016                        -->
+    <!-- EXTERNAL LIBRARIES                               -->
+    <!-- کتابخانه‌های خارجی                                -->
+    <!-- ================================================= -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-017                        -->
+    <!-- MAIN SCRIPT                                       -->
+    <!-- فایل اصلی جاوااسکریپت                             -->
+    <!-- ================================================= -->
+    
+    <script src="dashboard.js"></script>
+    
+    
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-018                        -->
+    <!-- PAGE LOADED                                       -->
+    <!-- پایان بارگذاری صفحه                               -->
+    <!-- ================================================= -->
+    
+    <script>
+    
+    console.log("========================================");
+    
+    console.log("SMM360 VIP Care");
+    
+    console.log("Dashboard Loaded Successfully");
+    
+    console.log("Enterprise Edition");
+    
+    console.log("Version : 0.0.1");
+    
+    console.log("========================================");
+    
+    </script>
+    
+    </body>
+    
+    </html>
+    
+    <!-- ================================================= -->
+    <!-- SECTION ID : DASHBOARD-999                        -->
+    <!-- END VERSION : 0.0.1                               -->
+    <!-- پایان ماژول                                       -->
+    <!-- ================================================= -->
+    

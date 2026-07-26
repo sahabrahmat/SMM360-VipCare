@@ -1,0 +1,308 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : shared.css
+   MODULE      : Shared Framework
+   VERSION     : 1.0.0
+
+   AUTHOR      : Dr. Seyed Mehdi Mohammadi
+   PROJECT     : SMM360 VIP CARE
+   COPYRIGHT   : © SMM360 VIP CARE
+
+   DESCRIPTION :
+   هسته اصلی استایل‌های مشترک سیستم
+   (Global CSS Foundation)
+
+========================================================== */
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-001                       */
+/* CSS RESET                                         */
+/* بازنشانی اولیه مرورگر                             */
+/* ================================================= */
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-002                       */
+/* ROOT DOCUMENT                                     */
+/* تنظیمات سند                                       */
+/* ================================================= */
+
+html{
+
+    font-size:16px;
+
+    scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-003                       */
+/* BODY                                               */
+/* تنظیمات عمومی صفحه                                */
+/* ================================================= */
+
+body{
+
+    min-height:100vh;
+
+    direction:rtl;
+
+    overflow-x:hidden;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-004                       */
+/* MEDIA                                              */
+/* تصاویر و ویدئو                                    */
+/* ================================================= */
+
+img,
+svg,
+video,
+canvas{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-005                       */
+/* TYPOGRAPHY                                         */
+/* تایپوگرافی                                        */
+/* ================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small,
+strong{
+
+    overflow-wrap:break-word;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-006                       */
+/* LINKS                                              */
+/* لینک‌ها                                           */
+/* ================================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-007                       */
+/* LISTS                                              */
+/* لیست‌ها                                           */
+/* ================================================= */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-008                       */
+/* FORM ELEMENTS                                      */
+/* فرم‌ها                                            */
+/* ================================================= */
+
+button,
+input,
+select,
+textarea{
+
+    font:inherit;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+}
+
+
+button{
+
+    cursor:pointer;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-009                       */
+/* TABLE                                              */
+/* جدول‌ها                                           */
+/* ================================================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-010                       */
+/* HIDDEN                                             */
+/* مخفی                                              */
+/* ================================================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-011                       */
+/* FLEX                                               */
+/* کلاس‌های عمومی Flex                               */
+/* ================================================= */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-012                       */
+/* GRID                                               */
+/* کلاس عمومی Grid                                   */
+/* ================================================= */
+
+.grid{
+
+    display:grid;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-013                       */
+/* SELECTION                                          */
+/* رنگ انتخاب متن                                    */
+/* ================================================= */
+
+::selection{
+
+    background:#D4AF37;
+
+    color:#07192F;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-014                       */
+/* SCROLLBAR                                          */
+/* اسکرول بار                                        */
+/* ================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07192F;
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-015                       */
+/* PRINT MODE                                         */
+/* حالت چاپ                                          */
+/* ================================================= */
+
+@media print{
+
+    body{
+
+        background:#FFFFFF !important;
+
+        color:#000000 !important;
+
+    }
+
+}
+
+
+/* ================================================= */
+/* SECTION ID : SHARED-CSS-999                       */
+/* END VERSION : 1.0.0                               */
+/* پایان ماژول                                       */
+/* ================================================= */

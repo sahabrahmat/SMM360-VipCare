@@ -1,0 +1,11 @@
+{
+    "name": "smm360-vip-care",
+    "version": "1.0.0",
+    "productName":"SMM360 VIP Care",
+    "main": "main.js",
+    "author": "Dr. Seyyed Mehdi Mohammadi",
+    "description":"Smart Functional Medical System",
+    "license":"All Rights Reserved",
+    "private":true
+     
+}

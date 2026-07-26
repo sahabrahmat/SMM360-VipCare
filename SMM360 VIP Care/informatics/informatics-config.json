@@ -1,0 +1,28 @@
+{
+    "systemName": "SMM360 VIP Care",
+    "module": "Informatics",
+    "version": "0.0.1",
+    "language": "fa",
+    "direction": "rtl",
+
+    "dashboard": true,
+    "users": true,
+    "roles": true,
+    "permissions": true,
+    "sessions": true,
+    "audit": true,
+    "backup": true,
+    "api": true,
+
+    "theme": {
+        "primaryColor": "#07192F",
+        "secondaryColor": "#D4AF37",
+        "backgroundColor": "#102846"
+    },
+
+    "security": {
+        "auditEnabled": true,
+        "backupEnabled": true,
+        "maxLoginAttempt": 5
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "shared-settings.json",
+        "module": "Shared",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "تنظیمات عمومی و سراسری سیستم"
+    },
+
+    "application": {
+
+        "name": "SMM360 VIP Care",
+
+        "edition": "ENTERPRISE EDITION",
+
+        "version": "0.0.1",
+
+        "environment": "production",
+
+        "language": "fa",
+
+        "direction": "rtl",
+
+        "theme": "default"
+
+    },
+
+    "ui": {
+
+        "darkMode": false,
+
+        "animations": true,
+
+        "responsive": true,
+
+        "showLoader": true,
+
+        "showNotifications": true
+
+    },
+
+    "security": {
+
+        "sessionTimeout": 30,
+
+        "autoLogout": true,
+
+        "rememberLogin": false,
+
+        "csrfProtection": true
+
+    },
+
+    "localization": {
+
+        "timezone": "Asia/Tehran",
+
+        "calendar": "jalali",
+
+        "currency": "IRR",
+
+        "dateFormat": "YYYY/MM/DD",
+
+        "timeFormat": "HH:mm:ss"
+
+    },
+
+    "logging": {
+
+        "enabled": true,
+
+        "level": "INFO"
+
+    },
+
+    "backup": {
+
+        "enabled": true,
+
+        "autoBackup": false,
+
+        "backupInterval": "daily"
+
+    },
+
+    "endVersion": {
+
+        "version": "0.0.1",
+
+        "message": "پایان ماژول"
+
+    }
+}

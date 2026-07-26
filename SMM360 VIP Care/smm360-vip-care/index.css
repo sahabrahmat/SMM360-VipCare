@@ -1,0 +1,270 @@
+/* ==========================================================
+   SMM360 VIP Care
+   ENTERPRISE EDITION
+
+   FILE NAME   : index.css
+   MODULE      : System Entry
+   VERSION     : 0.0.1
+
+========================================================== */
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-001                 */
+/* ROOT                                              */
+/* رنگ های اصلی                                      */
+/* ================================================= */
+
+:root{
+    --navy:#07192f;
+    --gold:#d4af37;
+    --white:#ffffff;
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-002                 */
+/* BODY                                              */
+/* ================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    direction:rtl;
+    font-family:Tahoma,sans-serif;
+
+    background:
+    radial-gradient(circle at top,#173b69 0%,#07192f 60%,#04101d 100%);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-003                 */
+/* MAIN CARD                                         */
+/* ================================================= */
+
+.glass-card{
+
+    width:900px;
+
+    background:rgba(8,22,43,.85);
+
+    border:2px solid var(--gold);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 0 50px rgba(212,175,55,.25);
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-004                 */
+/* LOGO                                              */
+/* ================================================= */
+
+.logo img{
+
+    width:140px;
+
+    margin-bottom:20px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-005                 */
+/* TITLES                                            */
+/* ================================================= */
+
+h1{
+
+    color:var(--gold);
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.gold-line{
+
+    width:180px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:15px auto 25px;
+
+}
+
+h2{
+
+    font-size:24px;
+
+    line-height:42px;
+
+    margin-bottom:35px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-006                 */
+/* PHOTO                                             */
+/* ================================================= */
+
+.photo img{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    border:5px solid var(--gold);
+
+    object-fit:cover;
+
+    box-shadow:0 0 35px rgba(212,175,55,.6);
+
+}
+
+h3{
+
+    margin-top:25px;
+
+    color:var(--gold);
+
+}
+
+h4{
+
+    color:#d6d6d6;
+
+    margin:15px 0 30px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-007                 */
+/* QUOTE                                             */
+/* ================================================= */
+
+.quote-box{
+
+    position:relative;
+
+    border:2px dashed var(--gold);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    margin:35px auto;
+
+    max-width:750px;
+
+}
+
+.quote-box p{
+
+    line-height:38px;
+
+    font-size:20px;
+
+}
+
+.quote-mark{
+
+    position:absolute;
+
+    font-size:60px;
+
+    color:var(--gold);
+
+}
+
+.top{
+
+    top:-28px;
+
+    right:20px;
+
+}
+
+.bottom{
+
+    left:20px;
+
+    bottom:-28px;
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-008                 */
+/* BUTTON                                            */
+/* ================================================= */
+
+button{
+
+    width:330px;
+
+    height:58px;
+
+    background:linear-gradient(#f5d46b,#c79d1d);
+
+    color:#07192f;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.7);
+
+}
+
+/* ================================================= */
+/* SECTION ID : SYSTEM-ENTRY-CSS-009                 */
+/* FOOTER                                            */
+/* ================================================= */
+
+.footer{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#cfcfcf;
+
+    font-size:14px;
+
+}

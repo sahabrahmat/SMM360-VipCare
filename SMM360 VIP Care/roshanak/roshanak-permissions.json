@@ -1,0 +1,37 @@
+{
+    "identity": {
+        "system": "SMM360 VIP Care",
+        "edition": "ENTERPRISE EDITION",
+        "fileName": "roshanak-permissions.json",
+        "module": "Roshanak",
+        "version": "0.0.1",
+        "author": "Dr. Seyed Mehdi Mohammadi",
+        "project": "SMM360 VIP CARE",
+        "copyright": "© SMM360 VIP CARE",
+        "description": "مجوزهای واحد روشنک"
+    },
+
+    "sections": {
+        "SECTION-001": { "name": "Module Information", "title": "اطلاعات ماژول" },
+        "SECTION-002": { "name": "Roshanak Permissions", "title": "مجوزهای روشنک" },
+        "SECTION-999": { "name": "End Module", "title": "پایان ماژول", "version": "0.0.1" }
+    },
+
+    "permissions": {
+
+        "dashboard":{"title":"داشبورد","view":true,"create":false,"edit":false,"delete":false},
+
+        "bodyScan":{"title":"اسکن بدن","view":true,"create":true,"edit":true,"delete":false},
+
+        "painAssessment":{"title":"ثبت درد","view":true,"create":true,"edit":true,"delete":false},
+
+        "sensorMonitoring":{"title":"سنسورها","view":true,"create":true,"edit":true,"delete":false},
+
+        "treatment":{"title":"ثبت درمان","view":true,"create":true,"edit":true,"delete":false},
+
+        "reports":{"title":"گزارش‌ها","view":true,"create":false,"edit":false,"delete":false},
+
+        "settings":{"title":"تنظیمات","view":true,"create":false,"edit":true,"delete":false}
+
+    }
+}
